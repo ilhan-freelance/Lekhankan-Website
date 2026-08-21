@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lekhankan by VRM Vrindam (P) Limited | Offshore Bookkeeping & Accounting KPO</title>
+  <meta name="description" content="Lekhankan by VRM Vrindam (P) Limited — Offshore Bookkeeping | Accounting KPO | Virtual Accounting Services for CPA firms across USA & Canada." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 800: "#0b192e", 900: "#061224", 950: "#030a16" },
+            indigo: { 900: "#17233C" },
+            saffron: { 500: "#C98A32", 600: "#B87A22" },
+            gold: { 500: "#B79A5B", 600: "#A6894A" },
+            ivory: { 100: "#F5F1E8", 200: "#EFEAE0" },
+            emerald: { 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857" },
+            cyan: { 300: "#67e8f9", 400: "#22d3ee", 500: "#06b6d4" }
+          },
+          fontFamily: {
+            display: ["'Plus Jakarta Sans'","Inter","sans-serif"],
+            serif: ["'Cormorant Garamond'","Georgia","serif"],
+            body: ["Inter","system-ui","sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    :root { --ease-expo: cubic-bezier(0.16,1,0.3,1); }
+    ::selection { background: #C98A32; color: white; }
+    ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: #F5F1E8; } ::-webkit-scrollbar-thumb { background: #C98A32; border-radius: 3px; }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .85s var(--ease-expo), transform .85s var(--ease-expo); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .reveal-l { opacity: 0; transform: translateX(-36px); transition: opacity .85s var(--ease-expo), transform .85s var(--ease-expo); }
+    .reveal-l.visible { opacity: 1; transform: none; }
+    .reveal-r { opacity: 0; transform: translateX(36px); transition: opacity .85s var(--ease-expo), transform .85s var(--ease-expo); }
+    .reveal-r.visible { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; } .d4 { transition-delay: .4s; }
+    .reveal-d1 { opacity: 0; transform: translateY(28px); transition: opacity .85s var(--ease-expo) .15s, transform .85s var(--ease-expo) .15s; }
+    .reveal-d1.visible { opacity: 1; transform: none; }
+    .reveal-d2 { opacity: 0; transform: translateY(28px); transition: opacity .85s var(--ease-expo) .3s, transform .85s var(--ease-expo) .3s; }
+    .reveal-d2.visible { opacity: 1; transform: none; }
+    #hero { position: relative; min-height: 100svh; overflow: hidden; background: #030a16; display: flex; flex-direction: column; }
+    .hero-vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); filter: contrast(1.08) saturate(1.15) brightness(.82); will-change: transform; }
+    .hero-o1 { position: absolute; inset: 0; background: linear-gradient(to right, rgba(3,10,22,.75) 0%, rgba(3,10,22,.45) 50%, rgba(3,10,22,.2) 100%); z-index: 1; }
+    .hero-o2 { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(3,10,22,.5) 0%, transparent 40%, transparent 70%, rgba(3,10,22,.85) 100%); z-index: 2; }
+    .hero-grid { position: absolute; inset: 0; z-index: 3; background-image: linear-gradient(rgba(201,138,50,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201,138,50,.06) 1px, transparent 1px); background-size: 64px 64px; animation: gp 10s ease-in-out infinite; }
+    @keyframes gp { 0%,100% { opacity: .25; } 50% { opacity: .6; } }
+    .gold-text { background: linear-gradient(135deg,#C98A32,#B79A5B,#10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .ledger-grid { background-image: linear-gradient(rgba(183, 154, 91, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(183, 154, 91, 0.08) 1px, transparent 1px); background-size: 32px 32px; }
+    .marquee-track { display: flex; width: max-content; animation: mq 16s linear infinite; }
+    .mq-wrap:hover .marquee-track { animation-play-state: paused; }
+    @keyframes mq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    #nav-inner.nav-top {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border-bottom-color: rgba(255, 255, 255, 0.15) !important;
+      box-shadow: none !important;
+      padding-top: 1.25rem !important;
+      padding-bottom: 1.25rem !important;
+    }
+    #nav-inner.nav-top #nav-logo { color: #ffffff !important; }
+    #nav-inner.nav-top #nav-sub { color: rgba(255, 255, 255, 0.7) !important; }
+    #nav-inner.nav-top #nav-badge { background: rgba(201, 138, 50, 0.25) !important; border-color: rgba(201, 138, 50, 0.45) !important; color: #ffffff !important; }
+    #nav-inner.nav-top .nav-link { color: rgba(255, 255, 255, 0.9) !important; }
+    #nav-inner.nav-top #mob-btn { color: #ffffff !important; }
+
+    #nav-inner.nav-scrolled {
+      background: rgba(255, 255, 255, 0.97) !important;
+      backdrop-filter: blur(20px) saturate(180%) !important;
+      border-bottom: 1px solid rgba(201, 138, 50, 0.2) !important;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06), 0 0 12px rgba(201, 138, 50, 0.08) !important;
+      padding-top: 0.75rem !important;
+      padding-bottom: 0.75rem !important;
+    }
+    #nav-inner.nav-scrolled #nav-logo { color: #17233C !important; font-weight: 900 !important; }
+    #nav-inner.nav-scrolled #nav-sub { color: rgba(23, 35, 60, 0.6) !important; font-weight: 600 !important; }
+    #nav-inner.nav-scrolled #nav-badge { background: rgba(201, 138, 50, 0.15) !important; border-color: rgba(201, 138, 50, 0.4) !important; color: #C98A32 !important; }
+    #nav-inner.nav-scrolled .nav-link { color: #17233C !important; font-weight: 800 !important; }
+    #nav-inner.nav-scrolled .nav-link:hover { color: #C98A32 !important; }
+    #nav-inner.nav-scrolled #mob-btn { color: #17233C !important; }
+    .f-input, .f-select, .f-textarea { width: 100%; padding: .75rem 1rem; border: 1.5px solid #e2e8f0; border-radius: .75rem; font-size: .9rem; font-family: inherit; color: #0f172a; background: #f8fafc; transition: all .25s; outline: none; }
+    .f-input:focus, .f-select:focus, .f-textarea:focus { border-color: #C98A32; background: white; box-shadow: 0 0 0 3px rgba(201,138,50,.15); }
+    .testi-card { background: white; border: 1px solid #e2e8f0; border-radius: 1.5rem; padding: 2rem; transition: all .4s var(--ease-expo); box-shadow: 0 4px 20px rgba(0,0,0,.03); }
+    .testi-card:hover { border-color: rgba(201,138,50,.4); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="font-body bg-slate-50 text-slate-900 overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header id="nav" class="fixed top-0 left-0 right-0 w-full z-50 transition-all duration-500">
+  <div class="w-full px-6 sm:px-12 lg:px-16 py-5 flex items-center justify-between gap-6 bg-transparent border-b border-transparent transition-all duration-500" id="nav-inner">
+    <a href="#hero" class="flex items-center gap-3.5 text-decoration-none group">
+      <div id="nav-badge" class="w-10 h-10 rounded-xl bg-saffron-500/25 border border-saffron-500/40 backdrop-blur-md flex items-center justify-center text-white font-serif font-bold text-xl shadow-sm group-hover:scale-105 group-hover:bg-saffron-500 group-hover:text-indigo-900 transition-all">L</div>
+      <div class="flex flex-col leading-none">
+        <span class="font-display text-xl font-black tracking-tight uppercase text-white transition-colors" id="nav-logo">Lekhankan</span>
+        <span class="text-[.58rem] font-semibold text-white/70 transition-colors mt-0.5" id="nav-sub">By VRM Vrindam (P) Limited</span>
+      </div>
+    </a>
+    <nav class="hidden xl:flex items-center gap-7" id="nav-links">
+      <a href="#hero" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Home</a>
+      <a href="#brand-story" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Heritage</a>
+      <a href="#services" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Services</a>
+      <a href="#industries" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Industries</a>
+      <a href="#process" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Process</a>
+      <a href="#team" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Team</a>
+      <a href="#lead-magnets" class="nav-link text-[.7rem] font-extrabold tracking-widest uppercase text-white/90 hover:text-saffron-500 transition-all relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-saffron-500 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:rounded-full">Checklists</a>
+    </nav>
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 py-3 px-6 rounded-xl bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-400 text-indigo-900 text-[.72rem] font-extrabold tracking-widest uppercase shadow-lg shadow-saffron-500/20 hover:scale-105 transition-all whitespace-nowrap">Request Proposal →</a>
+    <button id="mob-btn" class="xl:hidden p-2 text-white hover:text-saffron-500 transition-colors" aria-label="Menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu" class="hidden fixed inset-0 z-[999] bg-indigo-900/98 backdrop-blur-3xl flex-col items-center justify-center gap-6 text-white">
+  <button id="mob-close" class="absolute top-6 right-6 text-white text-4xl leading-none hover:text-saffron-500 transition-colors">&times;</button>
+  <a href="#hero" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Home</a>
+  <a href="#brand-story" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Heritage</a>
+  <a href="#services" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Services</a>
+  <a href="#industries" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Industries</a>
+  <a href="#process" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Process</a>
+  <a href="#team" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Team</a>
+  <a href="#lead-magnets" class="mob-link font-serif text-2xl font-bold text-white hover:text-saffron-500 transition-colors">Checklists</a>
+  <a href="#contact" class="mob-link inline-flex items-center gap-2 py-3.5 px-8 rounded-xl bg-saffron-500 text-indigo-900 font-extrabold text-xs tracking-widest uppercase shadow-xl shadow-saffron-500/30 mt-4">Request Proposal</a>
+</div>
+
+<!-- HERO SECTION -->
+<section id="hero" class="relative min-h-[100svh] overflow-hidden bg-navy-950 flex flex-col justify-end">
+  
+  <!-- Video Background with Emerald & Navy Overlay -->
+  <video autoplay loop muted playsinline class="hero-vid" poster="images/hero_4k_background.png">
+    <source src="media/lekhankan_executive_loop.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-o1"></div>
+  <div class="hero-o2"></div>
+  <div class="hero-grid"></div>
+
+  <!-- Ticker Banner -->
+  <div class="relative z-20 bg-navy-900/90 border-t border-white/10 py-3 overflow-hidden mq-wrap">
+    <div class="marquee-track flex items-center gap-12 text-[.72rem] font-bold tracking-widest uppercase text-slate-300">
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Chartered Accountant Supervised</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> QuickBooks &amp; Xero Certified</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Up to 60% Cost Reduction</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> USA &amp; Canada Timezone Alignment</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Bank-Grade Confidentiality</span>
+      <!-- Duplicate for seamless scroll -->
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Chartered Accountant Supervised</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> QuickBooks &amp; Xero Certified</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Up to 60% Cost Reduction</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> USA &amp; Canada Timezone Alignment</span>
+      <span class="flex items-center gap-3"><span class="text-emerald-400">✦</span> Bank-Grade Confidentiality</span>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY SECTION: WHERE ACCOUNTING MEETS HERITAGE -->
+<section id="brand-story" class="py-10 sm:py-16 bg-gradient-to-br from-ivory-100 via-white to-amber-50/30 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  
+  <!-- Subtle Gradient Glow Accents -->
+  <div class="absolute top-1/4 left-10 w-96 h-96 rounded-full bg-saffron-500/5 blur-[140px] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-gold-500/5 blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 tracking-tight leading-tight">
+        Where Accounting Meets <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">Heritage</span>
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-saffron-500 to-gold-500 rounded-full mx-auto shadow-sm"></div>
+    </div>
+
+    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden reveal hover:shadow-2xl transition-shadow">
+      <div class="absolute top-0 right-0 p-8 opacity-5 font-serif text-8xl text-saffron-500 font-bold pointer-events-none select-none">
+        लेखन
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <div class="lg:col-span-7 space-y-5">
+          <h3 class="font-serif text-2xl sm:text-3xl font-semibold text-indigo-900 leading-snug">
+            "<span class="text-saffron-500 italic">Lekhankan</span>" is derived from Sanskrit and Hindi, meaning systematic record-keeping and precise financial ledger writing.
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed font-normal">
+            Long before cloud accounting and automated algorithms, merchants maintained detailed financial records through disciplined ledger practices. That spirit of precision, transparency, and organized financial thinking inspires Lekhankan today.
+          </p>
+          <div class="p-4 rounded-xl bg-saffron-500/5 border-l-4 border-saffron-500 text-slate-700 text-xs sm:text-sm italic font-serif">
+            "From traditional ledgers to modern cloud accounting, the principle remains unchanged: <strong class="text-saffron-600 not-italic font-bold">every number should tell the truth.</strong>"
+          </div>
+        </div>
+        <div class="lg:col-span-5 bg-indigo-900 text-white border border-indigo-800 rounded-2xl p-6 space-y-5 text-center shadow-lg">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-saffron-500 border-b border-white/15 pb-3">
+            THE VISUAL EVOLUTION
+          </h4>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+              <span class="w-7 h-7 rounded-lg bg-saffron-500/20 text-saffron-500 flex items-center justify-center font-bold text-xs">01</span>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white uppercase">TRADITIONAL LEDGER</div>
+                <div class="text-[0.68rem] text-slate-400">Disciplined record-keeping heritage</div>
+              </div>
+            </div>
+            <div class="text-gold-500 text-[0.68rem] font-bold">↓ DATA INTEGRATION</div>
+            <div class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+              <span class="w-7 h-7 rounded-lg bg-gold-500/20 text-gold-500 flex items-center justify-center font-bold text-xs">02</span>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white uppercase">CLOUD AUTOMATION</div>
+                <div class="text-[0.68rem] text-slate-400">QuickBooks, Xero, Bill.com, Gusto</div>
+              </div>
+            </div>
+            <div class="text-gold-500 text-[0.68rem] font-bold">↓ ACTIONABLE INSIGHTS</div>
+            <div class="flex items-center gap-3 bg-saffron-500/20 p-3 rounded-xl border border-saffron-500/40">
+              <span class="w-7 h-7 rounded-lg bg-saffron-500 text-white flex items-center justify-center font-bold text-xs">03</span>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white uppercase">FINANCIAL INTELLIGENCE</div>
+                <div class="text-[0.68rem] text-slate-300">Executive Power BI dashboards &amp; KPIs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BUSINESSES CHOOSE LEKHANKAN -->
+<section id="why-us" class="py-10 sm:py-16 bg-gradient-to-br from-white via-slate-50 to-ivory-100 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 uppercase tracking-tight">
+        Why Businesses Choose <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">Lekhankan</span>
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
+        Empowering CPA firms, accounting practices, and growing enterprises across USA &amp; Canada with dedicated offshore accounting teams and cost optimization.
+      </p>
+    </div>
+
+    <!-- 6 Core Feature Grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- 1. Reduce Accounting Costs by up to 60% -->
+      <div class="md:col-span-2 bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-saffron-500/50 transition-all reveal-l">
+        <div class="flex flex-col h-full space-y-4">
+          <div class="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-saffron-600">
+            <span class="w-2 h-2 rounded-full bg-saffron-500"></span> Cost Optimization
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-indigo-900 leading-tight">
+            Reduce Accounting Costs by up to <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">60%</span>
+          </h3>
+          <p class="text-xs sm:text-sm leading-relaxed text-slate-600">
+            Access highly qualified accounting professionals without the overhead of hiring an in-house finance department.
+          </p>
+
+          <!-- Interactive Savings Calculator -->
+          <div class="bg-indigo-900 text-white border border-indigo-800 rounded-2xl p-5 sm:p-6 mt-auto shadow-xl relative space-y-3">
+            <div class="flex justify-between items-center">
+              <div class="text-[0.68rem] font-bold uppercase tracking-wider text-slate-400">Estimated Annual Cost Savings</div>
+              <div class="flex items-center gap-1 bg-white/10 p-0.5 rounded-lg border border-white/15 text-[0.65rem] font-bold">
+                <button type="button" id="curr-usd" onclick="setCurrency('USD')" class="px-2 py-0.5 rounded-md bg-saffron-500 text-indigo-900 shadow-sm transition-all">USD ($)</button>
+                <button type="button" id="curr-cad" onclick="setCurrency('CAD')" class="px-2 py-0.5 rounded-md text-slate-300 hover:text-white transition-all">CAD ($)</button>
+              </div>
+            </div>
+            <div class="flex items-baseline justify-between">
+              <div class="font-serif text-3xl sm:text-4xl font-bold text-saffron-500 tracking-tight" id="roi-val">$64,800 / year</div>
+              <span class="text-[0.68rem] font-bold text-saffron-500 bg-saffron-500/20 px-2 py-0.5 rounded-md border border-saffron-500/40" id="roi-pct">Save ~54%</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5 pt-2">
+              <span class="text-[0.65rem] font-bold text-slate-400 uppercase tracking-wider mr-1">Role:</span>
+              <button type="button" class="role-btn px-2.5 py-0.5 rounded-full text-[0.68rem] font-bold bg-saffron-500 text-indigo-900 transition-all" data-role="bookkeeper" onclick="setRole('bookkeeper', this)">Bookkeeper</button>
+              <button type="button" class="role-btn px-2.5 py-0.5 rounded-full text-[0.68rem] font-bold bg-white/10 text-slate-300 hover:bg-white/20 transition-all" data-role="cpa" onclick="setRole('cpa', this)">CPA / Lead CA</button>
+              <button type="button" class="role-btn px-2.5 py-0.5 rounded-full text-[0.68rem] font-bold bg-white/10 text-slate-300 hover:bg-white/20 transition-all" data-role="tax" onclick="setRole('tax', this)">Tax &amp; Payroll</button>
+            </div>
+            <div class="pt-2">
+              <div class="flex justify-between text-xs mb-1"><span class="text-slate-400 font-medium">In-House Overhead</span><span class="text-slate-200 font-bold" id="us-cost">$140,000/yr</span></div>
+              <div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full rounded-full bg-slate-500 w-full"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-1"><span class="text-saffron-500 font-bold">Lekhankan Dedicated Team</span><span class="text-saffron-500 font-extrabold" id="lk-cost">$75,200/yr</span></div>
+              <div class="h-2 rounded-full bg-white/10 overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-saffron-500 to-gold-500 transition-all duration-500" id="lk-bar" style="width:54%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Dedicated Offshore Accounting Team -->
+      <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-saffron-500/50 transition-all flex flex-col reveal-r">
+        <div class="h-44 overflow-hidden relative">
+          <img src="images/lekhankan_accounting_team.png" alt="Dedicated Offshore Accounting Team" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-4 py-1 px-3 rounded-full bg-saffron-500 text-[0.62rem] font-bold uppercase tracking-wider text-white shadow-md">Dedicated Team</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1 space-y-3">
+          <h3 class="font-serif text-xl font-bold text-indigo-900">Dedicated Offshore Team</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Work with dedicated bookkeepers, accountants, reviewers, and finance specialists aligned specifically with your business.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-saffron-600 hover:gap-3 transition-all pt-3 border-t border-slate-100 mt-auto">Learn Team Model →</a>
+        </div>
+      </div>
+
+      <!-- 3. Qualified Chartered Accountants -->
+      <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-saffron-500/50 transition-all flex flex-col space-y-3 reveal-l">
+        <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🎓</div>
+        <h3 class="font-serif text-xl font-bold text-indigo-900">Qualified Chartered Accountants</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          Our accounting operations are supervised by Chartered Accountants, ensuring quality, consistency, and professional financial reporting.
+        </p>
+        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-saffron-600 hover:gap-3 transition-all pt-3 border-t border-slate-100 mt-auto">Supervision Standard →</a>
+      </div>
+
+      <!-- 4. Technology-Driven Accounting -->
+      <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:border-saffron-500/50 transition-all flex flex-col space-y-3 reveal-d2">
+        <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">⚡</div>
+        <h3 class="font-serif text-xl font-bold text-indigo-900">Technology-Driven Accounting</h3>
+        <p class="text-xs text-slate-600 leading-relaxed">
+          We utilize leading accounting platforms including QuickBooks Online, Xero, Bill.com, Gusto, Dext, Stripe, Hubdoc, and Power BI.
+        </p>
+        <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-saffron-600 hover:gap-3 transition-all pt-3 border-t border-slate-100 mt-auto">Integrations List →</a>
+      </div>
+
+      <!-- 5. Secure & Confidential -->
+      <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:border-saffron-500/50 transition-all flex flex-col reveal-r">
+        <div class="h-44 overflow-hidden relative">
+          <img src="images/lekhankan_security_analytics.png" alt="Secure & Confidential Financial Data" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/70 via-transparent to-transparent"></div>
+          <span class="absolute bottom-3 left-4 py-1 px-3 rounded-full bg-gold-500 text-[0.62rem] font-bold uppercase tracking-wider text-white shadow-md">Bank-Grade Security</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1 space-y-3">
+          <h3 class="font-serif text-xl font-bold text-indigo-900">Secure &amp; Confidential</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Your financial information is handled using secure workflows, role-based access, confidentiality agreements, and standardized controls.
+          </p>
+          <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-saffron-600 hover:gap-3 transition-all pt-3 border-t border-slate-100 mt-auto">Security Protocols →</a>
+        </div>
+      </div>
+
+      <!-- 6. Scalable Accounting Solutions -->
+      <div class="md:col-span-3 bg-indigo-900 border border-indigo-800 rounded-3xl p-8 text-white relative overflow-hidden shadow-2xl reveal">
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Scalable Accounting Solutions</h3>
+            <p class="text-xs sm:text-sm leading-relaxed text-slate-300 max-w-2xl">
+              Whether you need one bookkeeper or a complete offshore accounting department, our delivery model grows seamlessly with your business.
+            </p>
+          </div>
+          <a href="#contact" class="py-3.5 px-8 rounded-xl bg-saffron-500 text-indigo-900 font-extrabold text-xs tracking-widest uppercase shadow-xl hover:bg-gold-500 hover:scale-105 transition-all whitespace-nowrap">Build Your Team →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentCurr = 'USD';
+  let currentRoleMult = 1.0;
+  function setCurrency(curr) {
+    currentCurr = curr;
+    document.getElementById('curr-usd').className = curr === 'USD' ? 'px-2 py-0.5 rounded-md bg-saffron-500 text-indigo-900 shadow-sm transition-all' : 'px-2 py-0.5 rounded-md text-slate-300 hover:text-white transition-all';
+    document.getElementById('curr-cad').className = curr === 'CAD' ? 'px-2 py-0.5 rounded-md bg-saffron-500 text-indigo-900 shadow-sm transition-all' : 'px-2 py-0.5 rounded-md text-slate-300 hover:text-white transition-all';
+    updateROI(2);
+  }
+  function setRole(role, btn) {
+    document.querySelectorAll('.role-btn').forEach(b => { b.className = 'role-btn px-2.5 py-0.5 rounded-full text-[0.68rem] font-bold bg-white/10 text-slate-300 hover:bg-white/20 transition-all'; });
+    btn.className = 'role-btn px-2.5 py-0.5 rounded-full text-[0.68rem] font-bold bg-saffron-500 text-indigo-900 transition-all';
+    currentRoleMult = role === 'cpa' ? 1.4 : (role === 'tax' ? 1.2 : 1.0);
+    updateROI(2);
+  }
+  function updateROI(val) {
+    const symbol = currentCurr === 'CAD' ? 'C$' : '$';
+    const rate = currentCurr === 'CAD' ? 1.35 : 1.0;
+    const baseUS = 70000 * val * currentRoleMult * rate;
+    const baseLK = 37600 * val * currentRoleMult * rate;
+    const savings = baseUS - baseLK;
+    const pct = Math.round((savings / baseUS) * 100);
+    const valEl = document.getElementById('roi-val');
+    const usEl = document.getElementById('us-cost');
+    const lkEl = document.getElementById('lk-cost');
+    const pctEl = document.getElementById('roi-pct');
+    const barEl = document.getElementById('lk-bar');
+    if (valEl) valEl.innerText = `${symbol}${Math.round(savings).toLocaleString()} / yr`;
+    if (usEl) usEl.innerText = `${symbol}${Math.round(baseUS).toLocaleString()}/yr`;
+    if (lkEl) lkEl.innerText = `${symbol}${Math.round(baseLK).toLocaleString()}/yr`;
+    if (pctEl) pctEl.innerText = `Save ~${pct}%`;
+    if (barEl) barEl.style.width = `${100 - pct}%`;
+  }
+</script>
+
+<!-- OUR SERVICES - INTERACTIVE MASTER TABBED MATRIX (LIGHT THEME) -->
+<section id="services" class="py-10 sm:py-16 bg-gradient-to-br from-white via-slate-50 to-ivory-100 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-2 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 uppercase tracking-tight">
+        OUR <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">SERVICES</span>
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
+        Comprehensive offshore bookkeeping, accounting, accounts payable, accounts receivable, payroll, and virtual CFO solutions built for North American businesses and CPA firms.
+      </p>
+    </div>
+
+    <!-- TAB NAVIGATION PILLS -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 border-b border-slate-200 pb-4 reveal">
+      <button onclick="switchServiceTab('tab-bookkeeping', this)" class="svc-tab-btn active px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-indigo-900 text-white shadow-lg">
+        Bookkeeping
+      </button>
+      <button onclick="switchServiceTab('tab-ap', this)" class="svc-tab-btn px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200">
+        Accounts Payable
+      </button>
+      <button onclick="switchServiceTab('tab-ar', this)" class="svc-tab-btn px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200">
+        Accounts Receivable
+      </button>
+      <button onclick="switchServiceTab('tab-payroll', this)" class="svc-tab-btn px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200">
+        Payroll Accounting
+      </button>
+      <button onclick="switchServiceTab('tab-reporting', this)" class="svc-tab-btn px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200">
+        Financial Reporting
+      </button>
+      <button onclick="switchServiceTab('tab-virtual', this)" class="svc-tab-btn px-3.5 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200">
+        Virtual Finance Team
+      </button>
+    </div>
+
+    <!-- TAB CONTENTS -->
+    <div class="relative min-h-0">
+      
+      <!-- TAB 1: BOOKKEEPING SERVICES -->
+      <div id="tab-bookkeeping" class="svc-tab-pane grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📝</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Daily Transaction Recording</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Categorize income, expenses, deposits, and payments accurately according to your Chart of Accounts.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🏦</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Bank &amp; Credit Card Reconciliation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Regular bank and credit card statement matching to catch discrepancies, bank fees, and timing differences.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📊</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">General Ledger &amp; Journal Entries</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Clean GL maintenance, accruals, prepayments, depreciation schedules, and month-end journal posting.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🧹</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Historical Bookkeeping Cleanup</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Fix outdated, messy, or unreconciled accounts, remove duplicates, and organize books for tax filings.</p>
+        </div>
+      </div>
+
+      <!-- TAB 2: ACCOUNTS PAYABLE -->
+      <div id="tab-ap" class="svc-tab-pane hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">📑</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Invoice Processing &amp; Coding</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Review supplier bills, verify supporting receipts, code expenses, and enter bills into QBO or Bill.com.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">🔐</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Approval Workflow Support</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Manage structured multi-tier authorization workflows to prevent duplicate or unapproved vendor payouts.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">💳</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Bill.com Management</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Day-to-day Bill.com administration, payment queue preparation, and seamless accounting synchronization.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">📉</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">AP Aging &amp; Vendor Reconciliation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Weekly AP aging schedules, vendor statement matching, and working-capital optimization.</p>
+        </div>
+      </div>
+
+      <!-- TAB 3: ACCOUNTS RECEIVABLE -->
+      <div id="tab-ar" class="svc-tab-pane hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🧾</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Customer Invoicing</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Timely contract and project billing, verifying pricing, applying sales tax, and posting client invoices.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">💵</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Payment Application</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Accurately apply bank deposits, Stripe/Shopify payouts, and check payments to open customer accounts.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📞</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Collections Support</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Polite AR follow-ups, customer statements, monitoring overdue invoices, and cash flow predictability.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📈</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">AR Aging &amp; Revenue Tracking</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Track revenue dimensions by customer, project, or location, alongside detailed aging reports.</p>
+        </div>
+      </div>
+
+      <!-- TAB 4: PAYROLL ACCOUNTING -->
+      <div id="tab-payroll" class="svc-tab-pane hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">💰</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Payroll Journal Entries</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Record gross wages, employer taxes, benefit deductions, and payroll liabilities in your GL.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">⚙️</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Gusto &amp; ADP Integration</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Seamlessly connect payroll reports from Gusto or ADP with your cloud accounting system.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">📋</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Payroll Liability Reconciliation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Verify payroll tax withholding, 401(k) contributions, health insurance payables, and wage accounts.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">📊</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Payroll Cost Analysis</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Detailed departmental labor cost summaries for monthly management reviews.</p>
+        </div>
+      </div>
+
+      <!-- TAB 5: FINANCIAL REPORTING -->
+      <div id="tab-reporting" class="svc-tab-pane hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📉</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">P&amp;L, Balance Sheet &amp; Cash Flow</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Monthly closing statement package reflecting true financial health and operating profitability.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🎯</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Budget vs. Actual Variance</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Compare actual operational results against planned budgets to catch cost overruns early.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">📊</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Financial KPIs &amp; Analysis</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Track gross margins, operating cash conversion, AR turnover days, and unit economics.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-saffron-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-xl font-bold">🖥️</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Power BI Executive Dashboards</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Interactive executive dashboards transforming raw transaction data into visual executive intelligence.</p>
+        </div>
+      </div>
+
+      <!-- TAB 6: VIRTUAL FINANCE TEAM -->
+      <div id="tab-virtual" class="svc-tab-pane hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">👤</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Dedicated Bookkeeper</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Full-time or part-time dedicated resource for routine daily bookkeeping and reconciliations.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">🎓</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Senior Staff Accountant</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Advanced accounting support for month-end closing, complex journal entries, and GL supervision.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">⚖️</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Controller Support</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Senior financial oversight, internal controls, accounting policy enforcement, and CPA coordination.</p>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 hover:border-gold-500/60 hover:shadow-xl transition-all space-y-2 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-xl font-bold">💼</div>
+          <h3 class="font-serif text-base font-bold text-indigo-900">Virtual CFO Services</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Strategic financial planning, forecasting, cash flow modeling, and advisory for growing enterprises.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function switchServiceTab(tabId, btn) {
+    document.querySelectorAll('.svc-tab-pane').forEach(p => p.classList.add('hidden'));
+    document.getElementById(tabId).classList.remove('hidden');
+    document.querySelectorAll('.svc-tab-btn').forEach(b => {
+      b.classList.remove('bg-indigo-900', 'text-white', 'shadow-lg');
+      b.classList.add('bg-slate-100', 'text-slate-600', 'border', 'border-slate-200');
+    });
+    btn.classList.remove('bg-slate-100', 'text-slate-600', 'border', 'border-slate-200');
+    btn.classList.add('bg-indigo-900', 'text-white', 'shadow-lg');
+  }
+</script>
+
+
+<!-- INDUSTRIES WE SERVE - DAYLIGHT BACKGROUND WITH ULTRA-TRANSPARENT GLASS CARDS -->
+<section id="industries" class="py-10 sm:py-16 text-white relative overflow-hidden border-t border-slate-800">
+  
+  <!-- Clear Daylight Commercial Architecture & Trade Hub Background Image Layer -->
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    <img src="images/industries_daylight_connect.png" alt="Daylight Commercial District & Industries Hub" class="w-full h-full object-cover object-center opacity-90 filter saturate-110 contrast-105" />
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/50 to-slate-950/75"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto space-y-2 reveal">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white drop-shadow-md uppercase">
+        INDUSTRIES <span class="bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent">WE SERVE</span>
+      </h2>
+      <div class="w-16 h-1 bg-emerald-500 rounded-full mx-auto shadow-sm"></div>
+      <p class="text-slate-100 text-xs sm:text-sm font-medium drop-shadow-sm">
+        Tailored offshore bookkeeping and accounting KPO solutions built for specialized North American industries.
+      </p>
+    </div>
+
+    <!-- 6 COMPACT ULTRA-TRANSPARENT GLASS CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      
+      <!-- Card 01: CPA & Accounting Firms -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal-l">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              📊
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">CPA &amp; Accounting Firms</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">White-label bookkeeping, staff augmentation, and year-end review support for public accounting firms.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">White-label bookkeeping</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Bookkeeping cleanup</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Year-end support</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Staff augmentation</span>
+        </div>
+      </div>
+
+      <!-- Card 02: E-commerce Businesses -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              🛒
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">E-commerce Businesses</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">Multi-channel marketplace sales clearing, payment gateway reconciliations, and sales tax compliance.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Amazon</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Shopify</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Stripe reconciliation</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Sales tax support</span>
+        </div>
+      </div>
+
+      <!-- Card 03: Healthcare & Medical -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal-r">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              🩺
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">Healthcare &amp; Medical</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">HIPAA-compliant bookkeeping for clinics, insurance claim reconciliations, and provider payroll management.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Medical Clinics</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Dental Practices</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Insurance reconciliation</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Revenue reporting</span>
+        </div>
+      </div>
+
+      <!-- Card 04: Real Estate & Housing -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal-l">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              🏢
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">Real Estate &amp; Housing</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">Property management accounting, trust bank account reconciliations, and tenant rental ledgers.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Property management</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Rental bookkeeping</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Trust accounting</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Investor reporting</span>
+        </div>
+      </div>
+
+      <!-- Card 05: Construction & Build -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              🏗️
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">Construction &amp; Build</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">Job costing tracking, progress billing, subcontractor pay application reviews, and retention management.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Job costing</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Project accounting</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Subcontractor payments</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Progress billing</span>
+        </div>
+      </div>
+
+      <!-- Card 06: Professional Services -->
+      <div class="group bg-slate-900/20 backdrop-blur-md border border-white/20 hover:border-emerald-400 rounded-2xl p-5 hover:bg-slate-900/40 transition-all duration-300 shadow-xl flex flex-col justify-between space-y-4 reveal-r">
+        <div class="space-y-3">
+          <div class="flex items-center gap-3 border-b border-white/15 pb-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-xl group-hover:scale-110 transition-transform shadow-sm">
+              💼
+            </div>
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-emerald-400 transition-colors drop-shadow-sm">Professional Services</h3>
+          </div>
+          <p class="text-xs text-slate-100 leading-relaxed font-normal drop-shadow-xs">Time &amp; billing tracking, client trust account reconciliation, and project profitability analysis for agencies.</p>
+        </div>
+        <div class="flex flex-wrap gap-1 pt-2 border-t border-white/15">
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Law Firms</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Marketing Agencies</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">Consulting Firms</span>
+          <span class="text-[0.7rem] font-medium text-white bg-black/25 backdrop-blur-xs border border-white/20 px-2 py-0.5 rounded-md hover:border-emerald-400/60">IT Companies</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CPA FIRMS PARTNER WITH LEKHANKAN SECTION (LIGHT THEME) -->
+<section id="cpa-partner" class="py-10 sm:py-16 bg-gradient-to-br from-ivory-100 via-white to-amber-50/30 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    <div class="max-w-4xl mx-auto text-center space-y-3">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 uppercase tracking-tight">
+        WHY CPA FIRMS PARTNER WITH <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">LEKHANKAN</span>
+      </h2>
+      <div class="w-20 h-1 bg-gradient-to-r from-saffron-500 to-gold-500 rounded-full mx-auto shadow-sm"></div>
+      
+      <div class="space-y-2 pt-1">
+        <p class="text-xl sm:text-2xl font-bold text-indigo-900 font-serif italic">
+          Expand your firm's capacity without increasing payroll overhead.
+        </p>
+        <p class="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-2xl mx-auto">
+          We operate behind the scenes as your white-label offshore accounting team while you serve your clients under your established brand and quality standards.
+        </p>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 shadow-xl space-y-6 hover:shadow-2xl transition-shadow">
+      <div class="text-center">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-saffron-600 border-b border-slate-200 pb-3 inline-block">
+          CPA Partner Services Portfolio
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">White-Label Bookkeeping</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Daily &amp; monthly ledger maintenance under your firm's brand.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">Reconciliations</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Bank, credit card, loan, and payment gateway statement audits.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">Accounts Payable</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Vendor invoice processing, bill pay workflows &amp; 1099 support.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">Accounts Receivable</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Client invoicing, payment application &amp; aging monitoring.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">Month-End Close</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Adjusting journal entries, accruals &amp; closing checklists.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-saffron-500/50 hover:shadow-md transition-all space-y-1">
+          <h4 class="font-serif text-base font-bold text-indigo-900">Year-End Tax Prep Support</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Clean up client books &amp; schedules for your CPAs to focus on advisory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STRUCTURED ONBOARDING PROCESS (LIGHT THEME) -->
+<section id="process" class="py-10 sm:py-16 bg-gradient-to-br from-white via-slate-50 to-ivory-100 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  
+  <div class="absolute top-1/3 right-0 w-96 h-96 rounded-full bg-saffron-500/5 blur-[140px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 uppercase tracking-tight">
+        How We <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">Onboard &amp; Deliver</span>
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
+        A tested, repeatable process that gets your dedicated team operational in under 2 weeks.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+
+      <!-- Phase 1 -->
+      <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-saffron-500/60 hover:-translate-y-1 transition-all duration-300 reveal-l space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-sm font-black shadow-sm">01</div>
+          <div class="font-serif text-4xl font-black text-slate-100 select-none pointer-events-none">01</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-serif text-lg font-bold text-indigo-900">Discovery &amp; Consultation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            We assess your accounting requirements, software ecosystem, reporting standards &amp; compliance needs.
+          </p>
+        </div>
+        <ul class="space-y-2 pt-2 border-t border-slate-100">
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Scope &amp; workflow analysis</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Tech stack assessment</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Service level expectations</li>
+        </ul>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-gold-500/60 hover:-translate-y-1 transition-all duration-300 reveal-d1 space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-600 flex items-center justify-center text-sm font-black shadow-sm">02</div>
+          <div class="font-serif text-4xl font-black text-slate-100 select-none pointer-events-none">02</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-serif text-lg font-bold text-indigo-900">Team Assembly &amp; Training</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            We hand-pick accountants matched to your industry &amp; platform expertise, then run intensive orientation.
+          </p>
+        </div>
+        <ul class="space-y-2 pt-2 border-t border-slate-100">
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Skill-matched recruitment</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Client-specific onboarding</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-gold-500/10 text-gold-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Platform certification</li>
+        </ul>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-amber-600/60 hover:-translate-y-1 transition-all duration-300 reveal-d2 space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-600 flex items-center justify-center text-sm font-black shadow-sm">03</div>
+          <div class="font-serif text-4xl font-black text-slate-100 select-none pointer-events-none">03</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-serif text-lg font-bold text-indigo-900">Parallel Ops &amp; QA Phase</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Your team runs alongside existing operations to validate accuracy before full handover.
+          </p>
+        </div>
+        <ul class="space-y-2 pt-2 border-t border-slate-100">
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Shadow period execution</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Multi-tier review checks</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Error-rate benchmarking</li>
+        </ul>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:border-saffron-500/60 hover:-translate-y-1 transition-all duration-300 reveal-r space-y-4">
+        <div class="flex items-center justify-between">
+          <div class="w-10 h-10 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 flex items-center justify-center text-sm font-black shadow-sm">04</div>
+          <div class="font-serif text-4xl font-black text-slate-100 select-none pointer-events-none">04</div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="font-serif text-lg font-bold text-indigo-900">Full Operations &amp; Reporting</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Your dedicated team operates autonomously with structured check-ins, KPI reporting &amp; continuous optimization.
+          </p>
+        </div>
+        <ul class="space-y-2 pt-2 border-t border-slate-100">
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Dedicated SPOC manager</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Real-time dashboards</li>
+          <li class="flex items-center gap-2 text-xs text-slate-600 font-medium"><span class="w-4 h-4 rounded-full bg-saffron-500/10 text-saffron-600 flex items-center justify-center text-[0.65rem] font-bold">✓</span> Quarterly business reviews</li>
+        </ul>
+      </div>
+
+  </div>
+</section>
+
+<!-- MEET OUR TEAM - LEADERSHIP & OPERATIONS ROSTER -->
+<section id="team" class="py-10 sm:py-16 bg-indigo-900 text-ivory-100 relative overflow-hidden border-t border-gold-500/20 ledger-grid">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white uppercase tracking-tight">
+        Meet Our <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-200 bg-clip-text text-transparent italic">Team</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+        Chartered Accountants, IIT engineering technologists, and finance professionals working as an extension of your back office.
+      </p>
+    </div>
+
+    <!-- TEAM CATEGORY TABS -->
+    <div class="flex flex-wrap items-center justify-center gap-3 border-b border-white/10 pb-4 reveal">
+      <button onclick="switchTeamTab('team-leadership', this)" class="team-tab-btn active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-saffron-500 text-indigo-900 shadow-lg">
+        Leadership
+      </button>
+      <button onclick="switchTeamTab('team-tech', this)" class="team-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-white/10 text-slate-300 hover:bg-white/20">
+        Technology &amp; Automation
+      </button>
+      <button onclick="switchTeamTab('team-ops', this)" class="team-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-white/10 text-slate-300 hover:bg-white/20">
+        Accounting Operations
+      </button>
+      <button onclick="switchTeamTab('team-hr', this)" class="team-tab-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold tracking-wider uppercase transition-all bg-white/10 text-slate-300 hover:bg-white/20">
+        People &amp; Growth
+      </button>
+    </div>
+
+    <!-- TEAM ROSTER CONTENT -->
+    <div class="relative min-h-[380px]">
+      
+      <!-- TAB 1: LEADERSHIP -->
+      <div id="team-leadership" class="team-tab-pane grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+        
+        <!-- Vipul Rajesh Modi -->
+        <div class="bg-white/5 backdrop-blur-md border border-gold-500/30 rounded-2xl p-8 space-y-4 hover:border-saffron-500 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-white">Vipul Rajesh Modi</h3>
+                <p class="text-xs font-bold text-saffron-500 uppercase tracking-widest mt-0.5">Founder &amp; Managing Director</p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-saffron-500/20 border border-saffron-500/40 text-saffron-500 flex items-center justify-center font-serif text-xl font-bold">VRM</div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">Pioneering global KPO strategy, accounting process design, financial consulting, and technology-driven finance operations for USA &amp; Canadian enterprises.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Business Strategy</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Process Design</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Global Client Relations</span>
+          </div>
+        </div>
+
+        <!-- Nazneen Akhtar -->
+        <div class="bg-white/5 backdrop-blur-md border border-gold-500/30 rounded-2xl p-8 space-y-4 hover:border-saffron-500 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-white">Nazneen Akhtar</h3>
+                <p class="text-xs font-bold text-saffron-500 uppercase tracking-widest mt-0.5">Co-Founder &amp; Head of Operations</p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-500 flex items-center justify-center font-serif text-xl font-bold">NA</div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">Directing accounting service delivery, quality assurance workflows, operational execution, and client satisfaction standards across all offshore teams.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Accounting Operations</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Client Delivery</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Quality Assurance</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 2: TECHNOLOGY & AUTOMATION -->
+      <div id="team-tech" class="team-tab-pane hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Akash Khodwal -->
+        <div class="bg-white/5 backdrop-blur-md border border-gold-500/30 rounded-2xl p-8 space-y-4 hover:border-saffron-500 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-white">Akash Khodwal</h3>
+                <p class="text-xs font-bold text-gold-500 uppercase tracking-widest mt-0.5">Automation &amp; AI Architect <span class="text-saffron-500">(IIT Kharagpur)</span></p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-saffron-500/20 border border-saffron-500/40 text-saffron-500 flex items-center justify-center font-serif text-xl font-bold">AK</div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">Architecting automated financial workflows, digital transformation, cloud accounting API integrations, and Power BI business intelligence.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">IIT Kharagpur</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Software Architecture</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Business Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Amit Modi -->
+        <div class="bg-white/5 backdrop-blur-md border border-gold-500/30 rounded-2xl p-8 space-y-4 hover:border-saffron-500 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <div>
+                <h3 class="font-serif text-2xl font-bold text-white">Amit Modi</h3>
+                <p class="text-xs font-bold text-gold-500 uppercase tracking-widest mt-0.5">Cloud Accounting Infrastructure</p>
+              </div>
+              <div class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/40 text-gold-500 flex items-center justify-center font-serif text-xl font-bold">AM</div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">Managing cloud system administration, bank-grade data security protocols, software environments, and technology support.</p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/10">
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Cloud Infrastructure</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">System Administration</span>
+            <span class="text-[0.68rem] font-medium text-slate-200 bg-white/10 px-2.5 py-1 rounded-md border border-white/10">Tech Support</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 3: ACCOUNTING OPERATIONS -->
+      <div id="team-ops" class="team-tab-pane hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Ritesh Vijay -->
+        <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-2 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-lg font-bold text-white">Ritesh Vijay</h4>
+          <p class="text-xs text-saffron-500 font-semibold uppercase">Senior Accounting Review</p>
+          <p class="text-[0.72rem] text-slate-300">Financial Reporting &amp; Month-End Closing Oversight.</p>
+        </div>
+
+        <!-- Ayushi Agrawal -->
+        <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-2 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-lg font-bold text-white">Ayushi Agrawal</h4>
+          <p class="text-xs text-saffron-500 font-semibold uppercase">Bookkeeping &amp; AP/AR</p>
+          <p class="text-[0.72rem] text-slate-300">Transaction categorization &amp; ledger management.</p>
+        </div>
+
+        <!-- Harshita Maheshwari -->
+        <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-2 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-lg font-bold text-white">Harshita Maheshwari</h4>
+          <p class="text-xs text-saffron-500 font-semibold uppercase">Bank Reconciliation Specialist</p>
+          <p class="text-[0.72rem] text-slate-300">Financial records &amp; accounting documentation.</p>
+        </div>
+
+        <!-- Vishal Agrawal -->
+        <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-2 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-lg font-bold text-white">Vishal Agrawal</h4>
+          <p class="text-xs text-saffron-500 font-semibold uppercase">Management Reporting</p>
+          <p class="text-[0.72rem] text-slate-300">Financial analysis &amp; quality control review.</p>
+        </div>
+
+        <!-- ParthJeet Singh Hada -->
+        <div class="bg-white/5 border border-white/15 rounded-xl p-5 space-y-2 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-lg font-bold text-white">ParthJeet Singh Hada</h4>
+          <p class="text-xs text-saffron-500 font-semibold uppercase">Accounting Operations</p>
+          <p class="text-[0.72rem] text-slate-300">Financial statement preparation &amp; process control.</p>
+        </div>
+
+      </div>
+
+      <!-- TAB 4: PEOPLE & GROWTH -->
+      <div id="team-hr" class="team-tab-pane hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Pallavi Modi -->
+        <div class="bg-white/5 border border-white/15 rounded-2xl p-6 space-y-3 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-xl font-bold text-white">Pallavi Modi</h4>
+          <p class="text-xs text-saffron-500 font-bold uppercase tracking-wider">Talent Acquisition &amp; People Operations</p>
+          <p class="text-xs text-slate-300">Recruiting top 1% Chartered Accountants and finance specialists, onboarding, and client administration.</p>
+        </div>
+
+        <!-- Muskan Khatri -->
+        <div class="bg-white/5 border border-white/15 rounded-2xl p-6 space-y-3 hover:border-gold-500 transition-all">
+          <h4 class="font-serif text-xl font-bold text-white">Muskan Khatri</h4>
+          <p class="text-xs text-saffron-500 font-bold uppercase tracking-wider">Digital Marketing &amp; Brand Communication</p>
+          <p class="text-xs text-slate-300">Managing North American client engagement, brand communication, and business development support.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function switchTeamTab(tabId, btn) {
+    document.querySelectorAll('.team-tab-pane').forEach(p => p.classList.add('hidden'));
+    document.getElementById(tabId).classList.remove('hidden');
+    document.querySelectorAll('.team-tab-btn').forEach(b => {
+      b.classList.remove('bg-saffron-500', 'text-indigo-900', 'shadow-lg');
+      b.classList.add('bg-white/10', 'text-slate-300');
+    });
+    btn.classList.remove('bg-white/10', 'text-slate-300');
+    btn.classList.add('bg-saffron-500', 'text-indigo-900', 'shadow-lg');
+  }
+</script>
+
+<!-- FREE DOWNLOADABLE LEAD MAGNETS & CHECKLISTS SECTION (LIGHT THEME) -->
+<section id="lead-magnets" class="py-10 sm:py-16 bg-gradient-to-br from-ivory-100 via-white to-amber-50/30 text-slate-900 relative overflow-hidden border-t border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-indigo-900 uppercase tracking-tight">
+        FREE <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-600 bg-clip-text text-transparent italic">BOOKKEEPING GUIDES</span> &amp; CHECKLISTS
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base font-normal leading-relaxed">
+        Download our free standardized checklists, cost calculators, and month-end templates designed for US &amp; Canadian finance leaders.
+      </p>
+    </div>
+
+    <!-- RESOURCE CARDS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+      
+      <!-- Card 01 -->
+      <div class="bg-white border border-slate-200 hover:border-saffron-500/60 rounded-2xl p-6 transition-all flex flex-col justify-between space-y-4 group shadow-sm hover:shadow-xl">
+        <div class="space-y-3">
+          <span class="text-2xl">📋</span>
+          <h3 class="font-serif text-base font-bold text-indigo-900 group-hover:text-saffron-600 transition-colors">2026 US Small Business Bookkeeping Checklist</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Step-by-step quarterly &amp; annual accounting tasks to keep your books audit-ready.</p>
+        </div>
+        <button onclick="openResourceModal('2026 US Small Business Bookkeeping Checklist')" class="w-full py-2.5 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 font-bold text-xs uppercase tracking-wider hover:bg-saffron-500 hover:text-white transition-all">
+          Download Free PDF ↓
+        </button>
+      </div>
+
+      <!-- Card 02 -->
+      <div class="bg-white border border-slate-200 hover:border-saffron-500/60 rounded-2xl p-6 transition-all flex flex-col justify-between space-y-4 group shadow-sm hover:shadow-xl">
+        <div class="space-y-3">
+          <span class="text-2xl">🗓️</span>
+          <h3 class="font-serif text-base font-bold text-indigo-900 group-hover:text-saffron-600 transition-colors">Month-End Close Checklist</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Standard closing procedures for accurate monthly financial statements without delays.</p>
+        </div>
+        <button onclick="openResourceModal('Month-End Close Checklist')" class="w-full py-2.5 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 font-bold text-xs uppercase tracking-wider hover:bg-saffron-500 hover:text-white transition-all">
+          Download Free PDF ↓
+        </button>
+      </div>
+
+      <!-- Card 03 -->
+      <div class="bg-white border border-slate-200 hover:border-saffron-500/60 rounded-2xl p-6 transition-all flex flex-col justify-between space-y-4 group shadow-sm hover:shadow-xl">
+        <div class="space-y-3">
+          <span class="text-2xl">🧮</span>
+          <h3 class="font-serif text-base font-bold text-indigo-900 group-hover:text-saffron-600 transition-colors">Bookkeeping Outsourcing Cost Calculator</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Calculate exact annual cost savings of an offshore accounting team vs. hiring in-house.</p>
+        </div>
+        <button onclick="openResourceModal('Bookkeeping Outsourcing Cost Calculator')" class="w-full py-2.5 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 font-bold text-xs uppercase tracking-wider hover:bg-saffron-500 hover:text-white transition-all">
+          Download Calculator ↓
+        </button>
+      </div>
+
+      <!-- Card 04 -->
+      <div class="bg-white border border-slate-200 hover:border-saffron-500/60 rounded-2xl p-6 transition-all flex flex-col justify-between space-y-4 group shadow-sm hover:shadow-xl">
+        <div class="space-y-3">
+          <span class="text-2xl">🏬</span>
+          <h3 class="font-serif text-base font-bold text-indigo-900 group-hover:text-saffron-600 transition-colors">CPA Firm Outsourcing Readiness Checklist</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Capacity planning guide for public accounting firms scaling white-label staff.</p>
+        </div>
+        <button onclick="openResourceModal('CPA Firm Outsourcing Readiness Checklist')" class="w-full py-2.5 rounded-xl bg-saffron-500/10 border border-saffron-500/30 text-saffron-600 font-bold text-xs uppercase tracking-wider hover:bg-saffron-500 hover:text-white transition-all">
+          Download Free PDF ↓
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- DOWNLOAD RESOURCE MODAL -->
+<div id="resource-modal" class="hidden fixed inset-0 z-[999] bg-indigo-900/90 backdrop-blur-xl flex items-center justify-center p-4">
+  <div class="bg-white border border-slate-200 rounded-3xl p-8 max-w-md w-full relative space-y-6 shadow-2xl">
+    <button onclick="closeResourceModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-800 text-2xl font-bold">&times;</button>
+    <div class="space-y-2">
+      <div class="text-xs font-bold text-saffron-600 uppercase tracking-widest">FREE RESOURCE DOWNLOAD</div>
+      <h3 id="modal-resource-title" class="font-serif text-xl font-bold text-indigo-900">Resource Title</h3>
+      <p class="text-xs text-slate-600">Enter your business email to instantly receive your free downloadable checklist.</p>
+    </div>
+
+    <form onsubmit="handleResourceSubmit(event)" class="space-y-4">
+      <div>
+        <label class="block text-xs font-bold text-slate-700 mb-1">Work Email Address *</label>
+        <input type="email" required placeholder="name@company.com" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs outline-none focus:border-saffron-500 focus:ring-2 focus:ring-saffron-500/20" />
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-700 mb-1">Company Name</label>
+        <input type="text" placeholder="Your Business / CPA Firm" class="w-full p-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-900 text-xs outline-none focus:border-saffron-500 focus:ring-2 focus:ring-saffron-500/20" />
+      </div>
+      <button type="submit" class="w-full py-3.5 rounded-xl bg-saffron-500 text-white font-bold text-xs uppercase tracking-widest hover:bg-gold-500 transition-all shadow-lg">
+        Send Me The Guide
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openResourceModal(title) {
+    document.getElementById('modal-resource-title').innerText = title;
+    document.getElementById('resource-modal').classList.remove('hidden');
+  }
+  function closeResourceModal() {
+    document.getElementById('resource-modal').classList.add('hidden');
+  }
+  function handleResourceSubmit(e) {
+    e.preventDefault();
+    alert('Thank you! Your guide has been sent to your inbox.');
+    closeResourceModal();
+  }
+</script>
+
+<!-- CONTACT & LEAD GENERATION SECTION -->
+<section id="contact" class="py-10 sm:py-16 bg-indigo-900 text-ivory-100 relative overflow-hidden border-t border-gold-500/20 ledger-grid">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white uppercase tracking-tight">
+        Let's Build Your <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-200 bg-clip-text text-transparent italic">Offshore Finance Team</span>
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
+        Complete the assessment details below. Our accounting specialists will evaluate your requirements and send a customized proposal within 24 hours.
+      </p>
+    </div>
+
+    <!-- 12-FIELD QUALIFYING FORM -->
+    <div class="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-gold-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl reveal">
+      
+      <form onsubmit="handleLeadSubmit(event)" class="space-y-6">
+        
+        <!-- ROW 1: Name & Company -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">1. Full Name *</label>
+            <input type="text" required placeholder="John Smith" class="f-input" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">2. Company / Firm Name *</label>
+            <input type="text" required placeholder="Smith &amp; Associates CPA / Acme Inc" class="f-input" />
+          </div>
+        </div>
+
+        <!-- ROW 2: Country & Industry -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">3. Country *</label>
+            <select required class="f-select">
+              <option value="United States">United States</option>
+              <option value="Canada">Canada</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">4. Industry *</label>
+            <select required class="f-select">
+              <option value="CPA / Accounting Firm">CPA &amp; Accounting Firm</option>
+              <option value="E-Commerce & Retail">E-Commerce &amp; Retail</option>
+              <option value="Healthcare & Medical">Healthcare &amp; Medical Clinics</option>
+              <option value="Real Estate & Housing">Real Estate &amp; Property Management</option>
+              <option value="Construction & Build">Construction &amp; Contracting</option>
+              <option value="Professional Services">Professional Services / Agency</option>
+              <option value="Technology & SaaS">Technology &amp; SaaS</option>
+              <option value="Other">Other Industry</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ROW 3: Revenue Range & Primary Software -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">5. Annual Revenue Range</label>
+            <select class="f-select">
+              <option value="Under $500k">Under $500k</option>
+              <option value="$500k - $2M">$500k - $2M</option>
+              <option value="$2M - $5M">$2M - $5M</option>
+              <option value="$5M - $10M">$5M - $10M</option>
+              <option value="$10M+">$10M+</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">6. Accounting Software</label>
+            <select class="f-select">
+              <option value="QuickBooks Online">QuickBooks Online (QBO)</option>
+              <option value="Xero">Xero</option>
+              <option value="NetSuite">NetSuite</option>
+              <option value="SAP Business One">SAP Business One</option>
+              <option value="Bill.com">Bill.com</option>
+              <option value="Other">Other Software</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ROW 4: Bank Accounts & Monthly Transactions -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">7. Number of Bank / CC Accounts</label>
+            <select class="f-select">
+              <option value="1 - 3 Accounts">1 - 3 Accounts</option>
+              <option value="4 - 7 Accounts">4 - 7 Accounts</option>
+              <option value="8+ Accounts">8+ Accounts</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">8. Approx. Monthly Transactions</label>
+            <select class="f-select">
+              <option value="Under 250">Under 250 transactions/mo</option>
+              <option value="250 - 750">250 - 750 transactions/mo</option>
+              <option value="750 - 2,000">750 - 2,000 transactions/mo</option>
+              <option value="2,000+">2,000+ transactions/mo</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ROW 5: Current Arrangement & Help Needed -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">9. Current Bookkeeping Arrangement</label>
+            <select class="f-select">
+              <option value="In-house Bookkeeper">In-House Staff</option>
+              <option value="Local CPA / Accounting Firm">Local CPA Firm</option>
+              <option value="Freelance Bookkeeper">Freelance Bookkeeper</option>
+              <option value="Outdated / Need Cleanup">Behind on Books / Need Cleanup</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">10. Primary Goal / Help Needed</label>
+            <select class="f-select">
+              <option value="White-Label CPA Support">White-Label CPA Support</option>
+              <option value="Full Back-Office Bookkeeping">Full Back-Office Bookkeeping</option>
+              <option value="AP / AR Management">AP / AR Management</option>
+              <option value="Payroll Accounting">Payroll Accounting</option>
+              <option value="Historical Bookkeeping Cleanup">Historical Cleanup</option>
+              <option value="Dedicated Virtual CFO">Dedicated Virtual CFO</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ROW 6: Work Email & Phone Number -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">11. Business Email Address *</label>
+            <input type="email" required placeholder="john@company.com" class="f-input" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">12. Direct Phone Number *</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="f-input" />
+          </div>
+        </div>
+
+        <!-- SUBMIT BUTTON -->
+        <div class="pt-4 text-center">
+          <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-400 text-indigo-900 font-extrabold text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-saffron-500/20">
+            Submit Assessment &amp; Request Proposal →
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function handleLeadSubmit(e) {
+    e.preventDefault();
+    alert('Thank you! Your assessment has been received. A senior Lekhankan accounting consultant will contact you within 24 hours with your customized proposal.');
+  }
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-indigo-900 text-white pt-16 pb-12 border-t border-saffron-500/20">
+  <div class="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+      
+      <div class="lg:col-span-2 space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-saffron-500 to-gold-500 flex items-center justify-center text-indigo-900 font-serif font-bold text-xl shadow-lg">L</div>
+          <div>
+            <div class="font-display text-xl font-black tracking-tight uppercase text-white">Lekhankan</div>
+            <div class="text-[.62rem] font-bold text-saffron-500">By VRM Vrindam (P) Limited</div>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
+          Accounting Knowledge Process Outsourcing (KPO) delivering dedicated offshore bookkeeping and accounting solutions to CPA firms and growing enterprises across USA &amp; Canada.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-display text-xs font-black uppercase tracking-widest text-saffron-500">Services</h4>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li><a href="#services" class="hover:text-saffron-500 transition-colors">Bookkeeping &amp; Accounting</a></li>
+          <li><a href="#services" class="hover:text-saffron-500 transition-colors">CPA Back-Office Support</a></li>
+          <li><a href="#services" class="hover:text-saffron-500 transition-colors">Payroll Processing</a></li>
+          <li><a href="#services" class="hover:text-saffron-500 transition-colors">Financial Reporting &amp; Analytics</a></li>
+          <li><a href="#services" class="hover:text-saffron-500 transition-colors">Tax Prep Support</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-display text-xs font-black uppercase tracking-widest text-saffron-500">Company</h4>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li><a href="#brand-story" class="hover:text-saffron-500 transition-colors">About Us</a></li>
+          <li><a href="#why-us" class="hover:text-saffron-500 transition-colors">Why Choose Us</a></li>
+          <li><a href="#industries" class="hover:text-saffron-500 transition-colors">Industries Served</a></li>
+          <li><a href="#process" class="hover:text-saffron-500 transition-colors">Our Process</a></li>
+          <li><a href="#contact" class="hover:text-saffron-500 transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-display text-xs font-black uppercase tracking-widest text-saffron-500">Contact &amp; Support</h4>
+        <ul class="space-y-2 text-xs text-slate-300">
+          <li><strong class="text-white">Email:</strong> contact@lekhankan.com</li>
+          <li><strong class="text-white">Location:</strong> VRM Vrindam (P) Limited</li>
+          <li><strong class="text-white">Coverage:</strong> USA &amp; Canada Timezones</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[.7rem] text-slate-400">
+      <div>&copy; <?= date('Y Lekhankan by VRM Vrindam (P) Limited. All Rights Reserved.</div>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:text-saffron-500 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-saffron-500 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-saffron-500 transition-colors">Security Overview</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JS SCRIPTS & CALCULATOR HANDLER -->
+<script>
+  let currentCurrency = 'USD';
+  const roleRates = {
+    bookkeeper: { US: 70000, LK: 37600, pct: 46 },
+    cpa: { US: 110000, LK: 52000, pct: 53 },
+    tax: { US: 95000, LK: 44000, pct: 54 }
+  };
+  let currentRole = 'bookkeeper';
+
+  // Scroll Reveal Observer
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .reveal-d1, .reveal-d2').forEach(el => observer.observe(el));
+
+    // Navbar Scroll Handler
+    const navInner = document.getElementById('nav-inner');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navInner.classList.remove('nav-top');
+        navInner.classList.add('nav-scrolled');
+      } else {
+        navInner.classList.remove('nav-scrolled');
+        navInner.classList.add('nav-top');
+      }
+    });
+
+    // Mobile Menu
+    const mobBtn = document.getElementById('mob-btn');
+    const mobMenu = document.getElementById('mob-menu');
+    const mobClose = document.getElementById('mob-close');
+    if (mobBtn && mobMenu) {
+      mobBtn.addEventListener('click', () => mobMenu.classList.remove('hidden'));
+      mobClose.addEventListener('click', () => mobMenu.classList.add('hidden'));
+      document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => mobMenu.classList.add('hidden')));
+    }
+  });
+</script>
+</body>
+</html>

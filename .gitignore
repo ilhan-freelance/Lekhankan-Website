@@ -1,0 +1,17 @@
+# Ignored files and folders
+writable/cache/*
+!writable/cache/index.html
+!writable/cache/.gitkeep
+writable/logs/*
+!writable/logs/index.html
+!writable/logs/.gitkeep
+writable/session/*
+!writable/session/index.html
+!writable/session/.gitkeep
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
