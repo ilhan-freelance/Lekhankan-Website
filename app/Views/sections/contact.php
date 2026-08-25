@@ -1,159 +1,161 @@
-<!-- CONTACT & LEAD GENERATION SECTION -->
-<section id="contact" class="py-10 sm:py-16 bg-indigo-900 text-ivory-100 relative overflow-hidden border-t border-gold-500/20 ledger-grid">
-  
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6 sm:space-y-8">
-    
-    <!-- Section Header -->
-    <div class="text-center max-w-3xl mx-auto space-y-3 reveal">
-      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white uppercase tracking-tight">
-        Let's Build Your <span class="bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-200 bg-clip-text text-transparent italic">Offshore Finance Team</span>
-      </h2>
-      <p class="text-slate-300 text-sm sm:text-base font-normal leading-relaxed">
-        Complete the assessment details below. Our accounting specialists will evaluate your requirements and send a customized proposal within 24 hours.
-      </p>
-    </div>
-
-    <!-- 12-FIELD QUALIFYING FORM -->
-    <div class="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-gold-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl reveal">
+<!-- ═══ SECTION 16: MULTI-STEP LEAD FORM (SPLIT SCREEN) ═══ -->
+<section class="lead-form-sec" id="lead-form">
+  <div class="container-editorial">
+    <div class="split-form-grid">
       
-      <form onsubmit="handleLeadSubmit(event)" class="space-y-6">
+      <!-- Left Visual & Messaging Column -->
+      <div class="form-visual-side">
+        <div class="eyebrow-tag gold">GET STARTED TODAY</div>
+        <h2>LET'S BUILD YOUR OFFSHORE ACCOUNTING TEAM.</h2>
+        <p>
+          Fill out this brief assessment form to receive a tailored offshore accounting proposal, team structure, and cost reduction breakdown.
+        </p>
         
-        <!-- ROW 1: Name & Company -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">1. Full Name *</label>
-            <input type="text" required placeholder="John Smith" class="f-input" />
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">2. Company / Firm Name *</label>
-            <input type="text" required placeholder="Smith &amp; Associates CPA / Acme Inc" class="f-input" />
-          </div>
+        <div style="margin-top:3rem;padding:2rem;background:rgba(255,255,255,0.04);border-radius:var(--radius-md);border:1px solid var(--border-dark);">
+          <div style="font-family:var(--font-serif);font-size:1.5rem;color:var(--saffron);margin-bottom:0.5rem;">Direct Response Guarantee</div>
+          <p style="font-size:0.875rem;color:var(--ivory-3);">
+            Our Chartered Accountants review all inquiries and respond within 12 business hours with a custom consultation plan.
+          </p>
         </div>
-
-        <!-- ROW 2: Country & Industry -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">3. Country *</label>
-            <select required class="f-select">
-              <option value="United States">United States</option>
-              <option value="Canada">Canada</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">4. Industry *</label>
-            <select required class="f-select">
-              <option value="CPA / Accounting Firm">CPA &amp; Accounting Firm</option>
-              <option value="E-Commerce & Retail">E-Commerce &amp; Retail</option>
-              <option value="Healthcare & Medical">Healthcare &amp; Medical Clinics</option>
-              <option value="Real Estate & Housing">Real Estate &amp; Property Management</option>
-              <option value="Construction & Build">Construction &amp; Contracting</option>
-              <option value="Professional Services">Professional Services / Agency</option>
-              <option value="Technology & SaaS">Technology &amp; SaaS</option>
-              <option value="Other">Other Industry</option>
-            </select>
-          </div>
+      </div>
+      
+      <!-- Right 4-Step Interactive Form Box -->
+      <div class="form-box-card">
+        
+        <div class="form-step-nav">
+          <div class="eyebrow-tag" style="margin:0;">STEP ASSESSMENT</div>
+          <div class="form-step-num" id="formStepIndicator">STAGE 01 / 04</div>
         </div>
+        
+        <form id="lekhankanLeadForm" onsubmit="handleFormSubmit(event)">
+          
+          <!-- STEP 1: Basic Details -->
+          <div id="step1" class="form-step-panel">
+            <div class="form-input-group">
+              <label class="form-label">FULL NAME *</label>
+              <input type="text" id="inpName" class="form-control" placeholder="e.g. Robert Smith" required/>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">COMPANY NAME *</label>
+              <input type="text" id="inpCompany" class="form-control" placeholder="e.g. Acme Financial Group" required/>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">COUNTRY / LOCATION *</label>
+              <select id="inpCountry" class="form-control">
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Other">Other International</option>
+              </select>
+            </div>
+            <button type="button" class="btn-editorial btn-saffron" style="width:100%;margin-top:1rem;" onclick="goToStep(2)">Continue to Step 2 ➔</button>
+          </div>
+          
+          <!-- STEP 2: Business Profile -->
+          <div id="step2" class="form-step-panel" style="display:none;">
+            <div class="form-input-group">
+              <label class="form-label">INDUSTRY CATEGORY *</label>
+              <select id="inpIndustry" class="form-control">
+                <option value="CPA Firm">CPA / Accounting Firm</option>
+                <option value="E-Commerce">E-Commerce / Retail</option>
+                <option value="Healthcare">Healthcare / Medical</option>
+                <option value="Real Estate">Real Estate / Property Management</option>
+                <option value="Construction">Construction / Contracting</option>
+                <option value="Professional Services">Professional Services</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">ANNUAL REVENUE RANGE</label>
+              <select id="inpRevenue" class="form-control">
+                <option value="Under $1M">Under $1 Million</option>
+                <option value="$1M - $5M">$1 Million – $5 Million</option>
+                <option value="$5M - $20M">$5 Million – $20 Million</option>
+                <option value="$20M+">$20 Million+</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">PRIMARY ACCOUNTING SOFTWARE</label>
+              <select id="inpSoftware" class="form-control">
+                <option value="QuickBooks Online">QuickBooks Online</option>
+                <option value="Xero">Xero</option>
+                <option value="NetSuite">Oracle NetSuite</option>
+                <option value="Other">Other / Spreadsheets</option>
+              </select>
+            </div>
+            <div style="display:flex;gap:1rem;margin-top:1rem;">
+              <button type="button" class="btn-editorial btn-outline-white" style="flex:1;" onclick="goToStep(1)">← Back</button>
+              <button type="button" class="btn-editorial btn-saffron" style="flex:2;" onclick="goToStep(3)">Continue to Step 3 ➔</button>
+            </div>
+          </div>
+          
+          <!-- STEP 3: Bookkeeping Scope -->
+          <div id="step3" class="form-step-panel" style="display:none;">
+            <div class="form-input-group">
+              <label class="form-label">NUMBER OF BANK ACCOUNTS</label>
+              <input type="text" id="inpBankCount" class="form-control" placeholder="e.g. 3 checking accounts, 2 credit cards"/>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">APPROX. MONTHLY TRANSACTIONS</label>
+              <select id="inpTxnVolume" class="form-control">
+                <option value="<100">Under 100 transactions/mo</option>
+                <option value="100-500">100 – 500 transactions/mo</option>
+                <option value="500-2000">500 – 2,000 transactions/mo</option>
+                <option value="2000+">2,000+ transactions/mo</option>
+              </select>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">CURRENT BOOKKEEPING ARRANGEMENT</label>
+              <select id="inpCurrentSetup" class="form-control">
+                <option value="In-House Staff">In-House Staff</option>
+                <option value="Local CPA Firm">Local CPA Firm</option>
+                <option value="Owner Managed">Owner Managed</option>
+                <option value="Behind / Cleanup Needed">Behind / Cleanup Needed</option>
+              </select>
+            </div>
+            <div style="display:flex;gap:1rem;margin-top:1rem;">
+              <button type="button" class="btn-editorial btn-outline-white" style="flex:1;" onclick="goToStep(2)">← Back</button>
+              <button type="button" class="btn-editorial btn-saffron" style="flex:2;" onclick="goToStep(4)">Final Step ➔</button>
+            </div>
+          </div>
+          
+          <!-- STEP 4: Contact & Submission -->
+          <div id="step4" class="form-step-panel" style="display:none;">
+            <div class="form-input-group">
+              <label class="form-label">WORK EMAIL ADDRESS *</label>
+              <input type="email" id="inpEmail" class="form-control" placeholder="r.smith@company.com" required/>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">PHONE / WHATSAPP NUMBER *</label>
+              <input type="tel" id="inpPhone" class="form-control" placeholder="+1 (555) 000-0000" required/>
+            </div>
+            <div class="form-input-group">
+              <label class="form-label">WHAT SPECIFIC HELP DO YOU NEED?</label>
+              <textarea id="inpNotes" class="form-control" rows="3" placeholder="Describe your current accounting requirements..."></textarea>
+            </div>
+            <div style="display:flex;gap:1rem;margin-top:1rem;">
+              <button type="button" class="btn-editorial btn-outline-white" style="flex:1;" onclick="goToStep(3)">← Back</button>
+              <button type="submit" class="btn-editorial btn-saffron" style="flex:2;">Request Free Assessment ➔</button>
+            </div>
+          </div>
 
-        <!-- ROW 3: Revenue Range & Primary Software -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">5. Annual Revenue Range</label>
-            <select class="f-select">
-              <option value="Under $500k">Under $500k</option>
-              <option value="$500k - $2M">$500k - $2M</option>
-              <option value="$2M - $5M">$2M - $5M</option>
-              <option value="$5M - $10M">$5M - $10M</option>
-              <option value="$10M+">$10M+</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">6. Accounting Software</label>
-            <select class="f-select">
-              <option value="QuickBooks Online">QuickBooks Online (QBO)</option>
-              <option value="Xero">Xero</option>
-              <option value="NetSuite">NetSuite</option>
-              <option value="SAP Business One">SAP Business One</option>
-              <option value="Bill.com">Bill.com</option>
-              <option value="Other">Other Software</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- ROW 4: Bank Accounts & Monthly Transactions -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">7. Number of Bank / CC Accounts</label>
-            <select class="f-select">
-              <option value="1 - 3 Accounts">1 - 3 Accounts</option>
-              <option value="4 - 7 Accounts">4 - 7 Accounts</option>
-              <option value="8+ Accounts">8+ Accounts</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">8. Approx. Monthly Transactions</label>
-            <select class="f-select">
-              <option value="Under 250">Under 250 transactions/mo</option>
-              <option value="250 - 750">250 - 750 transactions/mo</option>
-              <option value="750 - 2,000">750 - 2,000 transactions/mo</option>
-              <option value="2,000+">2,000+ transactions/mo</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- ROW 5: Current Arrangement & Help Needed -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">9. Current Bookkeeping Arrangement</label>
-            <select class="f-select">
-              <option value="In-house Bookkeeper">In-House Staff</option>
-              <option value="Local CPA / Accounting Firm">Local CPA Firm</option>
-              <option value="Freelance Bookkeeper">Freelance Bookkeeper</option>
-              <option value="Outdated / Need Cleanup">Behind on Books / Need Cleanup</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">10. Primary Goal / Help Needed</label>
-            <select class="f-select">
-              <option value="White-Label CPA Support">White-Label CPA Support</option>
-              <option value="Full Back-Office Bookkeeping">Full Back-Office Bookkeeping</option>
-              <option value="AP / AR Management">AP / AR Management</option>
-              <option value="Payroll Accounting">Payroll Accounting</option>
-              <option value="Historical Bookkeeping Cleanup">Historical Cleanup</option>
-              <option value="Dedicated Virtual CFO">Dedicated Virtual CFO</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- ROW 6: Work Email & Phone Number -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">11. Business Email Address *</label>
-            <input type="email" required placeholder="john@company.com" class="f-input" />
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">12. Direct Phone Number *</label>
-            <input type="tel" required placeholder="+1 (555) 000-0000" class="f-input" />
-          </div>
-        </div>
-
-        <!-- SUBMIT BUTTON -->
-        <div class="pt-4 text-center">
-          <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-xl bg-gradient-to-r from-saffron-500 via-gold-500 to-amber-400 text-indigo-900 font-extrabold text-xs uppercase tracking-widest hover:scale-105 transition-all shadow-xl shadow-saffron-500/20">
-            Submit Assessment &amp; Request Proposal →
-          </button>
-        </div>
-
-      </form>
-
+        </form>
+        
+      </div>
+      
     </div>
-
   </div>
 </section>
 
 <script>
-  function handleLeadSubmit(e) {
-    e.preventDefault();
-    alert('Thank you! Your assessment has been received. A senior Lekhankan accounting consultant will contact you within 24 hours with your customized proposal.');
+function goToStep(stepNum) {
+  for (let i = 1; i <= 4; i++) {
+    const el = document.getElementById('step' + i);
+    if (el) el.style.display = (i === stepNum) ? 'block' : 'none';
   }
+  document.getElementById('formStepIndicator').innerText = `STAGE 0${stepNum} / 04`;
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  alert('Thank you! Your bookkeeping assessment request has been submitted to Lekhankan. A Chartered Accountant will contact you shortly.');
+}
 </script>
