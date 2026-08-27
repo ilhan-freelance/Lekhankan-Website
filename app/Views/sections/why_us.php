@@ -11,12 +11,8 @@
         <div class="trust-label">Offshore Accounting Team</div>
       </div>
       <div class="trust-block">
-        <div class="trust-stat">CA SUPERVISED</div>
-        <div class="trust-label">Financial Reporting</div>
-      </div>
-      <div class="trust-block">
-        <div class="trust-stat">USA + CANADA</div>
-        <div class="trust-label">North American Focus</div>
+        <div class="trust-stat">CA SUPERVISED &bull; USA + CANADA</div>
+        <div class="trust-label">North American Financial Reporting</div>
       </div>
     </div>
   </div>
