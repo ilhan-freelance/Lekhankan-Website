@@ -1,65 +1,100 @@
-<!-- ═══ SECTION 12: OUR PROCESS ═══ -->
+<!-- ═══ SECTION: OUR PROCESS (7-STAGE STAGGERED OFFSET PIPELINE) ═══ -->
 <section class="process-sec" id="process-timeline">
   <div class="container-editorial">
     
-    <div style="text-align:center;max-width:760px;margin:0 auto 4rem;">
-      <div class="eyebrow-tag" style="justify-content:center;">STRUCTURED ONBOARDING &amp; EXECUTION</div>
-      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem);color:var(--midnight);">
+    <!-- Centered Header without Eyebrow Tag -->
+    <div style="text-align:center;max-width:760px;margin:0 auto;">
+      <h2 class="serif-heading" style="font-size:clamp(2.3rem, 3.8vw, 3.5rem);color:var(--midnight);margin:0;">
         OUR PROCESS
       </h2>
-      <p style="font-size:1.0625rem;color:var(--slate);margin-top:1rem;">
-        A seamless 8-stage journey to transition your back-office finance operations into a high-performing offshore asset.
+      <p style="font-size:1.025rem;color:var(--slate);margin-top:0.65rem;line-height:1.5;">
+        A seamless 7-stage journey to transition your back-office finance operations into a high-performing offshore asset.
       </p>
     </div>
     
-    <div class="process-grid-flex">
+    <!-- Staggered Offset Card Pipeline Container -->
+    <div class="process-staggered-container">
       
-      <div class="process-step-card">
-        <div class="step-num-badge">01</div>
-        <div class="step-title">Discovery Meeting</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Assessment of software, volume, &amp; current bookkeeping workflow.</p>
-      </div>
+      <!-- Dashed Connector Paths with Downward Arrowheads (Pointing to next card) -->
+      <div class="connector-1-2"></div>
+      <div class="connector-2-3"></div>
+      <div class="connector-3-4"></div>
+      <div class="connector-4-5"></div>
+      <div class="connector-5-6"></div>
+      <div class="connector-6-7"></div>
       
-      <div class="process-step-card">
-        <div class="step-num-badge">02</div>
-        <div class="step-title">Secure Onboarding</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">NDA execution, security setup, &amp; encrypted access protocol.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">03</div>
-        <div class="step-title">Software Setup</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Connecting QuickBooks, Xero, Bill.com, &amp; supporting tools.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">04</div>
-        <div class="step-title">Team Allocation</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Assigning dedicated staff accountants &amp; CA supervisor.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">05</div>
-        <div class="step-title">Daily Operations</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Daily transaction logging, AP/AR, &amp; reconciliations.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">06</div>
-        <div class="step-title">Quality Review</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">CA verification &amp; month-end general ledger audit.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">07</div>
-        <div class="step-title">Monthly Reporting</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Delivering financial statements &amp; executive KPI decks.</p>
-      </div>
-      
-      <div class="process-step-card">
-        <div class="step-num-badge">08</div>
-        <div class="step-title">Continuous Improvement</div>
-        <p style="font-size:0.875rem;color:var(--slate);margin-top:0.5rem;">Ongoing process optimization &amp; capacity reviews.</p>
+      <div class="process-staggered-grid">
+        
+        <!-- Step 1: Discovery Meeting -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Discovery Meeting</h3>
+            <p class="process-card-desc">
+              Initial consultation to analyze your software ecosystem, transaction volumes, and back-office bookkeeping workflow.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2: Secure Client Onboarding -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Secure Client Onboarding</h3>
+            <p class="process-card-desc">
+              Executing non-disclosure agreements, establishing bank-grade security protocols, and configuring encrypted access.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3: Software Setup -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Software Setup</h3>
+            <p class="process-card-desc">
+              Seamless integration of QuickBooks, Xero, Bill.com, and supporting financial software with your existing stack.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4: Dedicated Team Allocation -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Dedicated Team Allocation</h3>
+            <p class="process-card-desc">
+              Assigning certified staff accountants and a Chartered Accountant supervisor tailored to your accounting requirements.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 5: Quality Review -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Quality Review</h3>
+            <p class="process-card-desc">
+              Multi-tier CA verification, transaction reconciliation, and rigorous month-end general ledger quality audits.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 6: Monthly Financial Reporting -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Monthly Financial Reporting</h3>
+            <p class="process-card-desc">
+              Delivering accurate P&amp;L statements, balance sheets, cash flow reports, and executive KPI performance decks.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 7: Continuous Process Improvement -->
+        <div class="process-offset-card">
+          <div class="process-card-inner">
+            <h3 class="process-card-title">Continuous Process Improvement</h3>
+            <p class="process-card-desc">
+              Ongoing process optimization, proactive workflow refinement, and periodic capacity expansion reviews.
+            </p>
+          </div>
+        </div>
+        
       </div>
       
     </div>
