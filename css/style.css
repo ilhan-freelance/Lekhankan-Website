@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 0 0.5rem;
+  padding: 0.5rem 0 0.35rem;
 }
 
 .lk-nav-top-left {
@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5 {
 
 .lk-nav-bottom-row {
   border-top: 1px solid rgba(23, 35, 60, 0.08);
-  padding: 0.65rem 0 0.85rem;
+  padding: 0.35rem 0 0.45rem;
   display: flex;
   justify-content: center;
 }
@@ -432,7 +432,7 @@ h1, h2, h3, h4, h5 {
 
 /* ── HERO SECTION ── */
 .hero-editorial {
-  padding: 4.5rem 0 6rem;
+  padding: 1.75rem 0 4.5rem;
   background: linear-gradient(180deg, var(--ivory) 0%, var(--ivory-2) 100%);
   position: relative;
   overflow: hidden;
