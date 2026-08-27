@@ -19,10 +19,10 @@
   --gold-light: #c9af78;
   --gold-dark: #977d44;
 
-  --ivory: #F5F1E8;
-  --ivory-2: #FAF8F3;
-  --ivory-3: #EDE8DC;
-  --ivory-dark: #E2DCCF;
+  --ivory: #FFFFFF;
+  --ivory-2: #FFFFFF;
+  --ivory-3: #FFFFFF;
+  --ivory-dark: #FFFFFF;
 
   --slate: #687080;
   --slate-light: #8C94A4;
@@ -65,7 +65,7 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--slate-dark);
-  background-color: var(--ivory);
+  background-color: #FFFFFF;
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(245, 241, 232, 0.97);
+  background-color: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-ivory);
   transition: var(--transition);
@@ -405,13 +405,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .lk-nav-menu-full .lk-nav-link {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--slate-dark);
   position: relative;
-  padding: 0.25rem 0;
+  padding: 0.2rem 0;
 }
 .lk-nav-menu-full .lk-nav-link:hover {
   color: var(--saffron);
@@ -433,7 +433,7 @@ h1, h2, h3, h4, h5 {
 /* ── HERO SECTION ── */
 .hero-editorial {
   padding: 1.75rem 0 4.5rem;
-  background: linear-gradient(180deg, var(--ivory) 0%, var(--ivory-2) 100%);
+  background: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
@@ -1226,7 +1226,7 @@ h1, h2, h3, h4, h5 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 30%, rgba(10, 16, 29, 0.15) 0%, rgba(10, 16, 29, 0.42) 100%);
+  background: radial-gradient(circle at 50% 20%, rgba(201, 138, 50, 0.22) 0%, rgba(10, 16, 29, 0.45) 55%, rgba(10, 16, 29, 0.78) 100%);
 }
 
 .cpa-compact-header {
@@ -1239,7 +1239,7 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
   font-size: clamp(1.95rem, 3.4vw, 2.6rem);
   font-weight: 700;
-  color: var(--ivory);
+  color: #FFFFFF;
   line-height: 1.15;
   margin-bottom: 0.5rem;
   text-shadow: 0 4px 20px rgba(0,0,0,0.5);
@@ -1256,7 +1256,7 @@ h1, h2, h3, h4, h5 {
 
 .cpa-compact-sub {
   font-size: 0.975rem;
-  color: var(--ivory-2);
+  color: #E2E8F0;
   margin-bottom: 0;
   line-height: 1.48;
   font-weight: 400;
@@ -1272,26 +1272,26 @@ h1, h2, h3, h4, h5 {
 }
 
 .cpa-micro-card {
-  background: rgba(10, 16, 29, 0.22);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(10, 16, 29, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-left: 3px solid var(--saffron);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: var(--radius-sm);
   padding: 1.05rem 1.15rem;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: none;
 }
 
 .cpa-micro-card:hover {
-  background: rgba(201, 138, 50, 0.12);
-  border-color: rgba(201, 138, 50, 0.55);
-  border-left-color: var(--gold);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  transform: none !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+  background: rgba(10, 16, 29, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  border-left-color: var(--saffron) !important;
 }
 
 .cpa-micro-header {
@@ -1305,8 +1305,8 @@ h1, h2, h3, h4, h5 {
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background: rgba(201, 138, 50, 0.15);
-  border: 1px solid rgba(201, 138, 50, 0.3);
+  background: rgba(201, 138, 50, 0.18);
+  border: 1px solid rgba(201, 138, 50, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1324,14 +1324,14 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-serif);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--ivory);
+  color: #FFFFFF;
   line-height: 1.2;
   margin: 0;
 }
 
 .cpa-micro-body {
   font-size: 0.8125rem;
-  color: var(--ivory-3);
+  color: #E2E8F0;
   line-height: 1.48;
   margin: 0;
 }

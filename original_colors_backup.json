@@ -1,0 +1,31 @@
+{
+  "description": "Original Editorial Color Palette Backup for Lekhankan Website",
+  "savedAt": "2026-08-27T13:04:33+05:30",
+  "colors": {
+    "--midnight": "#17233C",
+    "--midnight-light": "#1e2d4a",
+    "--midnight-dark": "#0d1525",
+    "--midnight-900": "#0a101d",
+    "--saffron": "#C98A32",
+    "--saffron-hover": "#b07528",
+    "--saffron-glow": "rgba(201, 138, 50, 0.25)",
+    "--gold": "#B79A5B",
+    "--gold-light": "#c9af78",
+    "--gold-dark": "#977d44",
+    "--ivory": "#F5F1E8",
+    "--ivory-2": "#FAF8F3",
+    "--ivory-3": "#EDE8DC",
+    "--ivory-dark": "#E2DCCF",
+    "--slate": "#687080",
+    "--slate-light": "#8C94A4",
+    "--slate-dark": "#2C323E",
+    "--white": "#FFFFFF",
+    "--border-light": "rgba(183, 154, 91, 0.22)",
+    "--border-dark": "rgba(201, 138, 50, 0.25)",
+    "--border-ivory": "rgba(23, 35, 60, 0.12)",
+    "--shadow-sm": "0 4px 12px rgba(23, 35, 60, 0.05)",
+    "--shadow-md": "0 12px 32px rgba(23, 35, 60, 0.09)",
+    "--shadow-lg": "0 24px 60px rgba(23, 35, 60, 0.14)",
+    "--shadow-dark": "0 24px 60px rgba(0, 0, 0, 0.4)"
+  }
+}
