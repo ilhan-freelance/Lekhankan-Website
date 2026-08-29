@@ -4,7 +4,6 @@
     
     <!-- Section Header -->
     <div style="text-align:center;max-width:760px;margin:0 auto 3.5rem;">
-      <div class="eyebrow-tag" style="justify-content:center;">EXECUTIVE LEADERSHIP &amp; SPECIALISTS</div>
       <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.6rem);color:var(--midnight);margin:0;">
         OUR <span style="color:var(--saffron);">TEAM</span>
       </h2>
