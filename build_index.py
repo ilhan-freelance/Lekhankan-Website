@@ -60,7 +60,6 @@ sections_order = [
     'about_lekhankan',
     'process',
     'team',
-    'insights',
     'contact',
 ]
 
