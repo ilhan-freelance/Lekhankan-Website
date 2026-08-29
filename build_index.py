@@ -57,16 +57,11 @@ sections_order = [
     'industries',
     'technology',
     'cpa_partner',
-    'brand_story',
-    'brand_video',
     'about_lekhankan',
-    'virtual_dept',
     'process',
     'team',
-    'lead_magnets',
     'insights',
     'contact',
-    'final_cta',
 ]
 
 html = parts['header'] + "\n"
