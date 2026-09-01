@@ -1,22 +1,20 @@
-<!-- ═══ SECTION 7: SERVICES (PINNED SCROLL STORYTELLING) ═══ -->
+<!-- ═══ SECTION 7: SERVICES (PINNED STICKY SCROLL STORYTELLING) ═══ -->
 <section class="services-pinned-sec" id="services-narrative">
   <div class="container-editorial">
     
-    <!-- Centered Section Title at Top -->
-    <div class="services-sec-header text-center" style="max-width:800px;margin:0 auto 4.5rem;text-align:center;">
-      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem);color:var(--midnight);line-height:1.15;">
-        Our Services
-      </h2>
-      <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
-      <p style="font-size:1.0625rem;color:var(--slate);margin-top:1.25rem;">
-        End-to-end accounting process outsourcing tailored for US &amp; Canadian businesses, CPA firms, and high-growth enterprises.
-      </p>
-    </div>
-    
     <div class="services-split-layout">
       
-      <!-- Sticky Visual Side (Pins on Scroll & Changes Image) -->
+      <!-- Sticky Visual Side (Pins "Our Services" Heading & Image on Scroll) -->
       <div class="services-visual-sticky">
+        
+        <!-- Left-Aligned Sticky Section Header -->
+        <div class="services-sec-header-left">
+          <h2 class="serif-heading services-sticky-title">
+            Our Services
+          </h2>
+          <div class="title-accent-line-left"></div>
+        </div>
+
         <div class="service-display-frame">
           <img id="serviceDynamicImg" src="images/bookkeeping_portrait.png" alt="Lekhankan Accounting Service Detail" style="opacity:1; transition:opacity 0.25s ease; width:100%; height:100%; object-fit:cover;"/>
         </div>

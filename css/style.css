@@ -304,242 +304,920 @@ h1, h2, h3, h4, h5 {
   color: var(--saffron);
 }
 
-/* ── HEADER / NAVIGATION ── */
-.lk-header {
-  position: sticky;
+/* ── REFERENCE NAVBAR (TRANSPARENT & NON-STICKY OVERLAY ON HERO) ── */
+.halstein-navbar {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-ivory);
-  transition: var(--transition);
+  background-color: transparent; /* Completely transparent navbar! */
+  border-bottom: none;
+  box-shadow: none;
+  padding: 1.25rem 4rem;
+  transition: all 0.3s ease;
 }
 
-.lk-nav-top-row {
+.nav-container-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0 0.35rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.lk-nav-top-left {
-  display: flex;
-  align-items: center;
-  flex: 1;
-}
-
-.lk-nav-top-center {
-  text-align: center;
-  flex: 1;
+.nav-brand-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-decoration: none;
 }
 
-.lk-logo-title {
-  font-family: var(--font-serif);
-  font-size: 2.15rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: var(--midnight);
+.nav-brand-title {
+  font-family: 'Cormorant Garamond', 'Cinzel', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
   line-height: 1;
-  display: block;
+  text-transform: lowercase;
 }
 
-.lk-logo-sub {
-  font-size: 0.625rem;
-  font-weight: 800;
-  letter-spacing: 0.22em;
+.nav-brand-sub {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--saffron);
-  display: block;
+  color: rgba(255, 255, 255, 0.85);
   margin-top: 3px;
 }
 
-.lk-nav-top-right {
+.nav-menu-wrapper {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex: 1;
+  margin-left: auto; /* Shift menu elements cleanly to the right edge */
 }
 
-.lk-logo-symbol {
-  width: 40px;
-  height: 40px;
-  background: var(--midnight);
-  border-radius: var(--radius-sm);
+.nav-menu-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: var(--transition);
-}
-.lk-logo-symbol::after {
-  content: '';
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 2px solid var(--saffron);
-  border-radius: 2px;
-}
-.lk-logo-symbol:hover {
-  transform: scale(1.08);
-}
-
-.lk-nav-bottom-row {
-  border-top: 1px solid rgba(23, 35, 60, 0.08);
-  padding: 0.35rem 0 0.45rem;
-  display: flex;
-  justify-content: center;
-}
-
-.lk-nav-menu-full {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.25rem;
+  gap: 3.25rem; /* Generous rightward spacing matching reference design */
   list-style: none;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-.lk-nav-menu-full .lk-nav-link {
-  font-size: 0.75rem;
+.nav-item-link {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--slate-dark);
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
   position: relative;
-  padding: 0.2rem 0;
-}
-.lk-nav-menu-full .lk-nav-link:hover {
-  color: var(--saffron);
-}
-.lk-nav-menu-full .lk-nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--saffron);
-  transition: var(--transition);
-}
-.lk-nav-menu-full .lk-nav-link:hover::after {
-  width: 100%;
-}
-
-/* ── HERO SECTION ── */
-.hero-editorial {
-  padding: 1.75rem 0 4.5rem;
-  background: #FFFFFF;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
   align-items: center;
 }
 
-.hero-content {
+.nav-item-link:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.nav-dash {
+  font-weight: 300;
+  margin-right: 0.35rem;
+  opacity: 0.85;
+}
+
+.nav-asterisk-item {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.nav-asterisk {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.4s ease;
+}
+
+.nav-asterisk:hover {
+  transform: rotate(90deg);
+  color: #FFFFFF;
+}
+
+/* Reference Horizontal Divider Line Under Navbar Container */
+.nav-bottom-divider {
+  width: 100%;
+  max-width: 1400px;
+  margin: 1.2rem auto 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* ── ANCIENT MANUSCRIPT LUXURY HERO SECTION (LIGHTER GOLDEN-TAN #C6A97D) ── */
+.ancient-halstein-hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #C6A97D; /* Lighter luxury golden-tan backdrop #C6A97D */
+  background-image: radial-gradient(circle at 40% 50%, rgba(220, 190, 145, 0.25) 0%, rgba(180, 145, 100, 0.2) 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.ancient-hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 8.5rem 4rem 3.5rem;
   position: relative;
   z-index: 2;
 }
 
-.hero-headline {
-  font-family: var(--font-serif);
-  font-size: clamp(2.75rem, 4.5vw, 4.25rem);
-  font-weight: 700;
-  line-height: 1.08;
-  color: var(--midnight);
-  margin-bottom: 1.5rem;
+.ancient-hero-content {
+  max-width: 660px;
+  width: 55%;
+  position: relative;
+  z-index: 5;
+  margin-top: 1.5rem; /* Shift text content slightly downward on same position */
 }
 
-.hero-supporting {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--saffron);
+.ancient-headline {
+  font-family: 'MedievalSharp', 'Cinzel', serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #120A04;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 2px rgba(255, 245, 230, 0.5);
+}
+
+.ancient-subtag {
+  font-family: 'Almendra', 'Cinzel', serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-style: italic;
+  color: #3D220E;
   margin-bottom: 1.25rem;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
-.hero-body {
-  font-size: 1rem;
-  color: var(--slate);
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
-  max-width: 620px;
-}
-
-.hero-cta-group {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  margin-bottom: 2.5rem;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
-.hero-service-line {
+.ancient-filigree {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-ivory);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--slate);
-  flex-wrap: nowrap;
-  white-space: nowrap;
-  overflow-x: auto;
+  margin-bottom: 1.75rem;
+  color: #4A2B14;
 }
 
-.hero-service-line span {
-  color: var(--gold-dark);
-  white-space: nowrap;
+.filigree-line {
+  height: 1px;
+  width: 70px;
+  background: linear-gradient(to right, rgba(74, 43, 20, 0.6), transparent);
 }
 
-.hero-visual-wrapper {
-  position: relative;
+.filigree-leaf, .filigree-icon {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+.ancient-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.ancient-body-text {
+  font-family: 'IM Fell English', 'Georgia', serif;
+  font-size: 0.95rem;
+  line-height: 1.62;
+  color: #1A0F06;
+  text-align: justify;
+  margin: 0;
+}
+
+.illuminated-dropcap {
+  font-family: 'Uncial Antiqua', 'MedievalSharp', serif;
+  float: left;
+  font-size: 3.2rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  color: #4A1206;
+  font-weight: 700;
+  text-shadow: 1px 1px 0px rgba(255, 235, 205, 0.8);
+}
+
+.ancient-cta-group {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
-.hero-circular-frame {
-  position: relative;
-  width: 100%;
-  max-width: 630px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  margin: 0 auto;
-  padding: 14px;
-  background: linear-gradient(135deg, var(--gold-light), var(--saffron), var(--midnight));
-  box-shadow: var(--shadow-lg), 0 0 50px rgba(201, 138, 50, 0.22);
-  transition: var(--transition);
-}
-.hero-circular-frame:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-lg), 0 0 65px rgba(201, 138, 50, 0.32);
-}
-
-.hero-circular-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+/* RIGHT SIDE SCULPTURE ARTWORK */
+.ancient-hero-art {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 44%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   overflow: hidden;
-  position: relative;
+  pointer-events: none;
+  z-index: 3;
 }
 
-.hero-circular-inner img {
-  width: 100%;
+.ancient-statue-img {
   height: 100%;
-  object-fit: cover;
-  filter: contrast(1.05) brightness(0.98);
+  width: auto;
+  object-fit: contain;
+  object-position: bottom right;
+  border-radius: 0; /* NO CIRCLE, NO OVAL */
+  filter: drop-shadow(-10px 10px 25px rgba(60, 35, 10, 0.14));
+}
+
+@media (max-width: 992px) {
+  .ancient-body-grid {
+    grid-template-columns: 1fr;
+  }
+  .ancient-hero-art {
+    width: 35%;
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .ancient-hero-container {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+  }
+  .ancient-hero-art {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .ancient-statue-img {
+    height: 100%;
+  }
+}
+
+.hero-image-full {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  opacity: 1; /* Pure vivid golden parchment paper */
+  mix-blend-mode: normal;
+}
+
+/* Direct Functional Click Areas — positioned EXACTLY over the image's buttons (No hover effects, no extra button elements) */
+.hero-click-area {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  display: block;
+}
+
+/* Left button click area: "Schedule a Free Consultation →" (Image v3 Match) */
+.hero-click-left {
+  top: 83.98%;
+  left: 15.43%;
+  width: 30.47%;
+  height: 10.74%;
+}
+
+/* Right button click area: "Request a Bookkeeping Assessment →" (Image v3 Match) */
+.hero-click-right {
+  top: 83.98%;
+  left: 49.32%;
+  width: 28.32%;
+  height: 10.74%;
+}
+
+@media (max-width: 768px) {
+  .hero-click-left {
+    top: 83.98%;
+    left: 15.43%;
+    width: 30.47%;
+    height: 10.74%;
+  }
+  .hero-click-right {
+    top: 83.98%;
+    left: 49.32%;
+    width: 28.32%;
+    height: 10.74%;
+  }
+}
+
+/* Headline in Ancient Manuscript Letterforms (MedievalSharp) — 
+   Looks hand-written by a medieval monk scribe, clear & readable */
+.sheet-headline {
+  font-family: 'MedievalSharp', 'Almendra', serif;
+  font-size: clamp(2.2rem, 3.6vw, 3.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #120A04;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.015em;
+  text-shadow: 0 1px 0px rgba(255, 245, 230, 0.6);
+}
+
+/* Subtag in Calligraphic Almendra — ancient feel, highly legible */
+.sheet-subtag {
+  font-family: 'Almendra', 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  font-weight: 700;
+  color: #7A1D0B;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.025em;
+}
+
+.sheet-subtag span {
+  display: inline-block;
+  padding: 0 0.35rem;
+}
+
+/* Filigree Ribbon */
+.sheet-filigree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin: 0.6rem auto 1.1rem;
+  max-width: 450px;
+  color: #8A5D2E;
+}
+
+.filigree-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(138, 93, 46, 0.6), transparent);
+}
+
+.filigree-leaf, .filigree-icon {
+  font-size: 1.05rem;
+}
+
+/* 2-Column Manuscript Body in IM Fell English — 
+   Digitized from REAL 17th-century hand-cut metal type,
+   slightly rough edges give authentic hand-written feel while staying perfectly readable */
+.sheet-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.sheet-body-text {
+  font-family: 'IM Fell English', 'Almendra', Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.82;
+  color: #18100A;
+  font-weight: 400;
+}
+
+/* Illuminated Initial Drop-Cap in Uncial Antiqua — 
+   Early medieval uncial script used in ancient codices */
+.illuminated-dropcap {
+  font-family: 'Uncial Antiqua', 'MedievalSharp', serif;
+  float: left;
+  font-size: 3.5rem;
+  line-height: 0.78;
+  padding-top: 3px;
+  padding-right: 9px;
+  color: #8C1607;
+  font-weight: 400;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+
+/* Call-to-Action Buttons */
+.sheet-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.btn-ancient-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2.5rem;
+  background: linear-gradient(135deg, #141B2D 0%, #080D1A 100%);
+  color: #F7EEDC;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid #C98A32;
+  box-shadow: 0 8px 24px rgba(12, 19, 34, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-ancient-primary:hover {
+  background: linear-gradient(135deg, #C98A32 0%, #B07525 100%);
+  color: #0C1322;
+  border-color: #0C1322;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(201, 138, 50, 0.4);
+}
+
+.btn-ancient-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2.5rem;
+  background: rgba(20, 27, 45, 0.05);
+  color: #141B2D;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 2px solid #141B2D;
+  transition: all 0.3s ease;
+}
+
+.btn-ancient-outline:hover {
+  background: #141B2D;
+  color: #F7EEDC;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(20, 27, 45, 0.2);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .deckled-parchment-stage {
+    padding: 2.25rem 1.5rem;
+  }
+  .sheet-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sheet-headline {
+    font-size: 1.75rem;
+  }
+  .illuminated-dropcap {
+    font-size: 2.3rem;
+  }
+  .sheet-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-ancient-primary, .btn-ancient-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .grand-parchment-stage {
+    padding: 3rem 2.5rem;
+  }
+  .grand-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .grand-parchment-sec {
+    padding: 2rem 0;
+  }
+  .grand-headline {
+    font-size: 1.85rem;
+  }
+  .illuminated-dropcap {
+    font-size: 2.5rem;
+  }
+  .grand-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-grand-primary, .btn-grand-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Headline in Cinzel Calligraphy */
+.sheet-headline {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.3rem, 3.9vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #140E0A;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Tagline in Mahogany Ink */
+.sheet-subtag {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #7A2616;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.sheet-subtag span {
+  display: inline-block;
+  padding: 0 0.3rem;
+}
+
+/* Filigree Divider */
+.sheet-filigree {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.25rem auto 1.85rem;
+  max-width: 450px;
+  color: #8A5D2E;
+}
+
+.filigree-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(138, 93, 46, 0.6), transparent);
+}
+
+.filigree-leaf, .filigree-icon {
+  font-size: 1.1rem;
+}
+
+/* 2-Column Manuscript Paragraphs with Illuminated Drop-Caps */
+.sheet-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.sheet-body-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #1F150E;
+  font-weight: 500;
+}
+
+/* Illuminated Initial Drop-Cap */
+.illuminated-dropcap {
+  font-family: 'Cinzel', serif;
+  float: left;
+  font-size: 3.3rem;
+  line-height: 0.8;
+  padding-top: 3px;
+  padding-right: 8px;
+  color: #8C1C0D;
+  font-weight: 800;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+/* Call-to-Action Buttons */
+.sheet-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-ancient-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.05rem 2.5rem;
+  background: linear-gradient(135deg, #17233C 0%, #0C1322 100%);
+  color: #F7EEDC;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid #C98A32;
+  box-shadow: 0 8px 24px rgba(12, 19, 34, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-ancient-primary:hover {
+  background: linear-gradient(135deg, #C98A32 0%, #B07525 100%);
+  color: #0C1322;
+  border-color: #0C1322;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(201, 138, 50, 0.45);
+}
+
+.btn-ancient-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.05rem 2.5rem;
+  background: rgba(23, 35, 60, 0.06);
+  color: #17233C;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  border: 2px solid #17233C;
+  transition: all 0.3s ease;
+}
+
+.btn-ancient-outline:hover {
+  background: #17233C;
+  color: #F7EEDC;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(23, 35, 60, 0.3);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .ancient-parchment-sheet {
+    padding: 3rem 2rem;
+  }
+  .sheet-body-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .parchment-sheet-sec {
+    padding: 2rem 0;
+  }
+  .sheet-headline {
+    font-size: 1.85rem;
+  }
+  .illuminated-dropcap {
+    font-size: 2.5rem;
+  }
+  .sheet-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-ancient-primary, .btn-ancient-outline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Top Eyebrow Badge */
+.manuscript-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.4rem;
+  background: rgba(201, 138, 50, 0.1);
+  border: 1px solid rgba(201, 138, 50, 0.35);
+  border-radius: 30px;
+  margin-bottom: 1.25rem;
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.badge-text {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9E6518;
+}
+
+/* Main Hero Headline */
+.manuscript-headline {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #17233C;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+/* Supporting Tagline */
+.manuscript-subtag {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  font-weight: 700;
+  color: #C98A32;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.manuscript-subtag span {
+  display: inline-block;
+  padding: 0 0.3rem;
+}
+
+/* Elegant Filigree Divider */
+.manuscript-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.25rem auto 1.85rem;
+  max-width: 450px;
+}
+
+.div-line {
+  flex: 1;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(201, 138, 50, 0.5), transparent);
+}
+
+.div-symbol {
+  font-size: 0.85rem;
+  color: #C98A32;
+}
+
+/* 2-Column Clean Text Paragraphs with Illuminated Drop-Caps */
+.manuscript-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.25rem;
+  text-align: left;
+  margin-bottom: 2.25rem;
+}
+
+.manuscript-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #2D3A52;
+  font-weight: 500;
+}
+
+/* Illuminated Drop Cap */
+.dropcap-light {
+  font-family: 'Cinzel', serif;
+  float: left;
+  font-size: 3.1rem;
+  line-height: 0.8;
+  padding-top: 2px;
+  padding-right: 8px;
+  color: #C98A32;
+  font-weight: 800;
+}
+
+/* Feature Highlight Cards */
+.manuscript-highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.manuscript-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.25rem 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid rgba(201, 138, 50, 0.25);
+  border-left: 4px solid #C98A32;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(23, 35, 60, 0.04);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.manuscript-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(23, 35, 60, 0.08);
+  border-color: #C98A32;
+}
+
+.card-stat-pill {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #17233C;
+  background: rgba(201, 138, 50, 0.15);
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(201, 138, 50, 0.3);
+  white-space: nowrap;
+}
+
+.card-content h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #17233C;
+  margin-bottom: 0.3rem;
+}
+
+.card-content p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+/* Action Buttons Group */
+.manuscript-cta-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+  flex-wrap: wrap;
+}
+
+/* Core Service Capabilities Line */
+.manuscript-service-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(23, 35, 60, 0.1);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748B;
+  flex-wrap: wrap;
+}
+
+.manuscript-service-line span {
+  color: #C98A32;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 992px) {
+  .manuscript-stage {
+    padding: 2.5rem 1.75rem;
+  }
+  .manuscript-body-grid, .manuscript-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .clean-hero-sec {
+    padding: 2rem 0;
+  }
+  .manuscript-headline {
+    font-size: 1.85rem;
+  }
+  .dropcap-light {
+    font-size: 2.5rem;
+  }
+  .manuscript-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .manuscript-cta-group .btn-editorial {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ── TRUST STRIP ── */
@@ -1045,7 +1723,7 @@ h1, h2, h3, h4, h5 {
 
 /* ── SERVICES — PINNED SCROLL STORYTELLING ── */
 .services-pinned-sec {
-  padding: 8rem 0;
+  padding: 5.5rem 0 8rem;
   background-color: var(--ivory);
 }
 
@@ -1062,8 +1740,30 @@ h1, h2, h3, h4, h5 {
 
 .services-visual-sticky {
   position: sticky;
-  top: 120px;
+  top: 10px;
   width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.services-sec-header-left {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.services-sticky-title {
+  font-size: clamp(2.4rem, 3.6vw, 3.5rem);
+  color: var(--midnight);
+  line-height: 1.12;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.title-accent-line-left {
+  width: 55px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  border-radius: 2px;
 }
 
 .service-display-frame {
@@ -1087,6 +1787,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+  padding-top: 3.5rem; /* Push right column content down so Our Services title sits higher! */
 }
 
 .service-story-block {
