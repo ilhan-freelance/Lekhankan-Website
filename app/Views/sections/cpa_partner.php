@@ -11,7 +11,7 @@
     
     <!-- Centered Section Header -->
     <div class="cpa-compact-header">
-      <h2 class="cpa-compact-title">Why CPA Firms Partner With Lekhankan</h2>
+      <h2 class="cpa-compact-title">Why CPA Firms Partner With Us</h2>
       <div class="cpa-compact-title-line"></div>
       <p class="cpa-compact-sub">
         Expand client capacity and scale your practice with dedicated, CA-supervised offshore accounting support.

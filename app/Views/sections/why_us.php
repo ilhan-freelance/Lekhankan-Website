@@ -2,22 +2,54 @@
 <section class="trust-strip-sec">
   <div class="container-editorial">
     <div class="trust-strip-grid">
+      
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
         <div class="trust-stat">UP TO 60%</div>
         <div class="trust-label">Lower Accounting Costs</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
         <div class="trust-stat">DEDICATED</div>
         <div class="trust-label">Offshore Accounting Team</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
         <div class="trust-stat">CA SUPERVISED</div>
         <div class="trust-label">Financial Reporting</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
         <div class="trust-stat">USA + CANADA</div>
         <div class="trust-label">North American Focus</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -26,12 +58,12 @@
 <section class="why-diagram-sec" id="why-lekhankan">
   <div class="container-editorial">
     
-    <!-- Centered Section Title at Top -->
-    <div style="text-align:center; max-width:800px; margin:0 auto 4.5rem;">
-      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem); color:var(--midnight); line-height:1.15;">
-        Why Businesses Choose Lekhankan
+    <!-- Left Aligned Section Title at Top -->
+    <div class="why-us-sec-header">
+      <h2 class="why-us-title">
+        Why Us
       </h2>
-      <div style="width:64px; height:3px; background:linear-gradient(90deg, var(--saffron), var(--gold)); margin:1rem auto 0; border-radius:2px;"></div>
+      <div class="why-us-title-line"></div>
     </div>
     
     <div class="why-diagram-grid">

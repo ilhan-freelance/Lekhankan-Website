@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   max-width: 1420px;
   margin: 0 auto;
-  padding: 8.5rem 4rem 3.5rem;
+  padding: 6rem 3.5rem 2rem;
   position: relative;
   z-index: 2;
 }
@@ -451,26 +451,26 @@ h1, h2, h3, h4, h5 {
   width: 55%;
   position: relative;
   z-index: 5;
-  margin-top: 1.5rem; /* Shift text content slightly downward on same position */
+  margin-top: 0;
 }
 
 .ancient-headline {
   font-family: 'MedievalSharp', 'Cinzel', serif;
-  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-size: clamp(1.9rem, 3.1vw, 2.75rem);
   font-weight: 400;
   line-height: 1.15;
   color: #120A04;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   letter-spacing: 0.01em;
   text-shadow: 0 1px 2px rgba(255, 245, 230, 0.5);
 }
 
 .ancient-subtag {
   font-family: 'Almendra', 'Cinzel', serif;
-  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-size: clamp(0.9rem, 1.25vw, 1.05rem);
   font-style: italic;
   color: #3D220E;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -481,7 +481,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
   color: #4A2B14;
 }
 
@@ -492,21 +492,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .filigree-leaf, .filigree-icon {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   opacity: 0.85;
 }
 
 .ancient-body-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2.25rem;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .ancient-body-text {
   font-family: 'IM Fell English', 'Georgia', serif;
-  font-size: 0.95rem;
-  line-height: 1.62;
+  font-size: 0.9rem;
+  line-height: 1.55;
   color: #1A0F06;
   text-align: justify;
   margin: 0;
@@ -515,11 +515,11 @@ h1, h2, h3, h4, h5 {
 .illuminated-dropcap {
   font-family: 'Uncial Antiqua', 'MedievalSharp', serif;
   float: left;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   line-height: 0.8;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-right: 6px;
+  padding-bottom: 0px;
   color: #4A1206;
   font-weight: 700;
   text-shadow: 1px 1px 0px rgba(255, 235, 205, 0.8);
@@ -528,7 +528,7 @@ h1, h2, h3, h4, h5 {
 .ancient-cta-group {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -1268,6 +1268,29 @@ h1, h2, h3, h4, h5 {
   background-color: var(--ivory-2);
 }
 
+.why-us-sec-header {
+  margin-bottom: 3.5rem;
+}
+
+.why-us-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 3.5vw, 3.25rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--midnight);
+  line-height: 1.12;
+  margin: 0 0 0.6rem 0;
+  letter-spacing: -0.01em;
+}
+
+.why-us-title-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
 .why-diagram-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1733,14 +1756,14 @@ h1, h2, h3, h4, h5 {
 
 .services-split-layout {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 4rem;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
   align-items: start;
 }
 
 .services-visual-sticky {
   position: sticky;
-  top: 10px;
+  top: 100px;
   width: 100%;
   margin-top: 0;
   padding-top: 0;
@@ -1752,7 +1775,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .services-sticky-title {
-  font-size: clamp(2.4rem, 3.6vw, 3.5rem);
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
   color: var(--midnight);
   line-height: 1.12;
   margin-top: 0;
@@ -1768,11 +1791,12 @@ h1, h2, h3, h4, h5 {
 
 .service-display-frame {
   width: 100%;
-  max-height: 520px;
-  aspect-ratio: 4/5;
-  border-radius: var(--radius-lg);
+  height: 420px;
+  max-height: 450px;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 14px 35px rgba(23, 35, 60, 0.12);
   position: relative;
 }
 
@@ -1791,8 +1815,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .service-story-block {
-  padding-bottom: 4rem;
+  padding: 4rem 0;
   border-bottom: 1px solid var(--border-ivory);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 480px;
 }
 .service-story-block:last-child {
   border-bottom: none;
@@ -2204,90 +2232,76 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ── TECHNOLOGY ECOSYSTEM & 100VW MOVING MARQUEE ── */
+/* ── SECTION 11: SOFTWARE EXPERTISE & TECH ECOSYSTEM (2x6 GRID) ── */
 .tech-ecosystem-sec {
-  background-color: var(--midnight-dark);
-  color: var(--ivory);
-  padding: 3.5rem 0 4.5rem;
-  overflow: hidden;
+  background-color: #FAFAFC;
+  color: var(--midnight);
+  padding: 5.5rem 0 6rem;
+  border-top: 1px solid var(--border-ivory);
+  border-bottom: 1px solid var(--border-ivory);
 }
 
-.tech-marquee-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 1.5rem 0;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+.tech-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.1rem;
 }
 
-.tech-marquee-track {
-  display: flex;
-  gap: 1.5rem;
-  width: max-content;
-  animation: techMarqueeScroll 28s linear infinite;
-}
-
-.tech-marquee-wrapper:hover .tech-marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes techMarqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.tech-node-item {
-  min-width: 260px;
-  flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-dark);
+.tech-card-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 35, 60, 0.08);
   border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+  padding: 1.1rem 0.95rem;
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  gap: 0.85rem;
   text-align: left;
+  box-shadow: 0 4px 12px rgba(23, 35, 60, 0.03);
   transition: var(--transition);
 }
 
-.tech-node-item:hover {
+.tech-card-item:hover {
   border-color: var(--saffron);
-  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 12px 28px rgba(23, 35, 60, 0.08);
   transform: translateY(-4px);
 }
 
 .tech-logo-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
-  background: transparent;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 35, 60, 0.08);
+  padding: 5px;
 }
 
 .tech-logo-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .tech-node-name {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  color: var(--ivory);
+  color: var(--midnight);
   margin-bottom: 0.15rem;
+  line-height: 1.2;
 }
 
 .tech-node-cat {
-  font-size: 0.725rem;
-  color: var(--gold);
+  font-size: 0.675rem;
+  color: var(--saffron);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
 }
 
 /* ── PROCESS TIMELINE (7-CARD STAGGERED OFFSET PIPELINE) ── */
@@ -3129,10 +3143,13 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     margin-top: 2rem;
   }
-  .trust-strip-grid, .tech-ecosystem-grid, .process-grid-flex,
+  .trust-strip-grid, .process-grid-flex,
   .resource-covers-grid, .team-grid-asym {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+  .tech-grid-container {
+    grid-template-columns: repeat(3, 1fr);
   }
   .org-timeline-line {
     display: none;
@@ -3153,11 +3170,26 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+@media (max-width: 768px) {
+  .tech-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tech-trust-banner {
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: var(--radius-md);
+  }
+}
+
 @media (max-width: 640px) {
-  .trust-strip-grid, .tech-ecosystem-grid, .process-grid-flex,
+  .trust-strip-grid, .process-grid-flex,
   .resource-covers-grid, .team-grid-asym, .cpa-glass-cards-grid-full {
     grid-template-columns: 1fr;
   }
+  .tech-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
   .why-composite-wrapper {
     max-width: 320px;
   }
@@ -3174,5 +3206,183 @@ h1, h2, h3, h4, h5 {
   .lk-nav-top-row {
     flex-direction: column;
     gap: 0.75rem;
+}
+
+/* ── SECTION: ABOUT LEKHANKAN (FULL 100VH FRAME LAYOUT WITH SLEEK LIGHT PADDING) ── */
+.about-overlap-sec {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background: var(--ivory);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.about-overlap-sec .container-editorial {
+  width: 100%;
+}
+
+.about-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
+
+@keyframes scrollGentleFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0px); }
+}
+
+.scroll-heritage-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.scroll-letter-box {
+  position: relative;
+  width: 100%;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  animation: scrollGentleFloat 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.scroll-letter-box:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+.scroll-paper-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(23, 35, 60, 0.12));
+}
+
+.scroll-passage-overlay {
+  position: absolute;
+  top: 22%;
+  left: 11%;
+  right: 11%;
+  bottom: 14%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  pointer-events: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.scroll-passage-text {
+  font-family: 'IM Fell English', 'Marck Script', Georgia, serif;
+  font-size: clamp(1.08rem, 1.4vw, 1.3rem);
+  line-height: 1.55;
+  color: #523A28; /* Soft vintage sepia ink color - lighter & refined */
+  margin: 0;
+  font-style: italic;
+  font-weight: 400; /* Regular light font weight */
+  letter-spacing: 0.015em;
+  text-shadow: 0 0 8px rgba(201, 138, 50, 0.2);
+}
+
+.scroll-dropcap {
+  font-family: 'Cinzel Decorative', 'IM Fell English', serif;
+  font-size: 2.8rem;
+  float: left;
+  line-height: 0.82;
+  padding-right: 0.35rem;
+  color: var(--saffron);
+  font-weight: 700;
+  font-style: normal;
+  text-shadow: 0 0 12px rgba(201, 138, 50, 0.6);
+}
+
+.about-main-title {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  color: var(--midnight);
+  line-height: 1.08;
+  margin: 0 0 0.85rem;
+}
+
+.text-saffron {
+  color: var(--saffron);
+}
+
+.title-accent-line {
+  width: 55px;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  border-radius: 2px;
+  margin-bottom: 1.75rem;
+}
+
+.about-lead-paragraph {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--midnight);
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+  font-style: italic;
+  border-left: 3.5px solid var(--saffron);
+  padding-left: 1.25rem;
+}
+
+.about-body-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-body-text {
+  font-size: 1rem;
+  color: var(--slate);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-chips-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pillar-chip {
+  background: rgba(245, 241, 232, 0.7);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--midnight);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+.pillar-chip span {
+  color: var(--saffron);
+}
+
+.pillar-chip:hover {
+  border-color: var(--saffron);
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .about-split-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }

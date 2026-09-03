@@ -11,7 +11,7 @@
 <meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Uncial+Antiqua&family=IM+Fell+English:ital@0;1&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Alex+Brush&family=Caveat:wght@600;700&family=MedievalSharp&family=Uncial+Antiqua&family=IM+Fell+English:ital@0;1&family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -123,22 +123,54 @@
 <section class="trust-strip-sec">
   <div class="container-editorial">
     <div class="trust-strip-grid">
+      
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
         <div class="trust-stat">UP TO 60%</div>
         <div class="trust-label">Lower Accounting Costs</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
         <div class="trust-stat">DEDICATED</div>
         <div class="trust-label">Offshore Accounting Team</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10"></polyline>
+          </svg>
+        </div>
         <div class="trust-stat">CA SUPERVISED</div>
         <div class="trust-label">Financial Reporting</div>
       </div>
+
       <div class="trust-block">
+        <div class="trust-icon-box">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
         <div class="trust-stat">USA + CANADA</div>
         <div class="trust-label">North American Focus</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -147,12 +179,12 @@
 <section class="why-diagram-sec" id="why-lekhankan">
   <div class="container-editorial">
     
-    <!-- Centered Section Title at Top -->
-    <div style="text-align:center; max-width:800px; margin:0 auto 4.5rem;">
-      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem); color:var(--midnight); line-height:1.15;">
-        Why Businesses Choose Lekhankan
+    <!-- Left Aligned Section Title at Top -->
+    <div class="why-us-sec-header">
+      <h2 class="why-us-title">
+        Why Us
       </h2>
-      <div style="width:64px; height:3px; background:linear-gradient(90deg, var(--saffron), var(--gold)); margin:1rem auto 0; border-radius:2px;"></div>
+      <div class="why-us-title-line"></div>
     </div>
     
     <div class="why-diagram-grid">
@@ -255,7 +287,7 @@
         </div>
 
         <div class="service-display-frame">
-          <img id="serviceDynamicImg" src="images/bookkeeping_portrait.png" alt="Lekhankan Accounting Service Detail" style="opacity:1; transition:opacity 0.25s ease; width:100%; height:100%; object-fit:cover;"/>
+          <img id="serviceDynamicImg" src="images/bookkeeping_horizontal.png" alt="Lekhankan Accounting Service Detail" style="opacity:1; transition:opacity 0.25s ease; width:100%; height:100%; object-fit:cover;"/>
         </div>
       </div>
       
@@ -263,7 +295,7 @@
       <div class="services-content-scroll">
         
         <!-- 01 Bookkeeping Services -->
-        <div class="service-story-block" data-img="images/bookkeeping_portrait.png" onmouseenter="updateServiceImg('images/bookkeeping_portrait.png')">
+        <div class="service-story-block" data-img="images/bookkeeping_horizontal.png" onmouseenter="updateServiceImg('images/bookkeeping_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 01</div>
           <h3 class="service-story-title">OFFSHORE BOOKKEEPING SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -283,7 +315,7 @@
         </div>
         
         <!-- 02 Accounting Outsourcing -->
-        <div class="service-story-block" data-img="images/accounting_outsourcing_portrait.png" onmouseenter="updateServiceImg('images/accounting_outsourcing_portrait.png')">
+        <div class="service-story-block" data-img="images/accounting_outsourcing_horizontal.png" onmouseenter="updateServiceImg('images/accounting_outsourcing_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 02</div>
           <h3 class="service-story-title">ACCOUNTING OUTSOURCING SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -301,7 +333,7 @@
         </div>
         
         <!-- 03 Accounts Payable Outsourcing -->
-        <div class="service-story-block" data-img="images/accounts_payable_portrait.png" onmouseenter="updateServiceImg('images/accounts_payable_portrait.png')">
+        <div class="service-story-block" data-img="images/accounts_payable_horizontal.png" onmouseenter="updateServiceImg('images/accounts_payable_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 03</div>
           <h3 class="service-story-title">ACCOUNTS PAYABLE OUTSOURCING</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -319,7 +351,7 @@
         </div>
 
         <!-- 04 Accounts Receivable Services -->
-        <div class="service-story-block" data-img="images/accounts_receivable_portrait.png" onmouseenter="updateServiceImg('images/accounts_receivable_portrait.png')">
+        <div class="service-story-block" data-img="images/accounts_receivable_horizontal.png" onmouseenter="updateServiceImg('images/accounts_receivable_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 04</div>
           <h3 class="service-story-title">ACCOUNTS RECEIVABLE SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -337,7 +369,7 @@
         </div>
         
         <!-- 05 Payroll Accounting Support -->
-        <div class="service-story-block" data-img="images/payroll_accounting_portrait.png" onmouseenter="updateServiceImg('images/payroll_accounting_portrait.png')">
+        <div class="service-story-block" data-img="images/payroll_accounting_horizontal.png" onmouseenter="updateServiceImg('images/payroll_accounting_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 05</div>
           <h3 class="service-story-title">PAYROLL ACCOUNTING SUPPORT</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -354,7 +386,7 @@
         </div>
 
         <!-- 06 Financial Reporting -->
-        <div class="service-story-block" data-img="images/financial_reporting_portrait.png" onmouseenter="updateServiceImg('images/financial_reporting_portrait.png')">
+        <div class="service-story-block" data-img="images/financial_reporting_horizontal.png" onmouseenter="updateServiceImg('images/financial_reporting_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 06</div>
           <h3 class="service-story-title">FINANCIAL REPORTING &amp; INTELLIGENCE</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -372,7 +404,7 @@
         </div>
 
         <!-- 07 Virtual Accounting Department -->
-        <div class="service-story-block" data-img="images/virtual_dept_portrait.png" onmouseenter="updateServiceImg('images/virtual_dept_portrait.png')">
+        <div class="service-story-block" data-img="images/virtual_dept_horizontal.png" onmouseenter="updateServiceImg('images/virtual_dept_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 07</div>
           <h3 class="service-story-title">VIRTUAL ACCOUNTING DEPARTMENT</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -395,40 +427,59 @@
   </div>
 </section>
 
-<script>
-function updateServiceImg(src) {
-  const img = document.getElementById('serviceDynamicImg');
-  if (!img) return;
-  
-  const currentFilename = img.src.split('/').pop().split('?')[0];
-  const targetFilename = src.split('/').pop().split('?')[0];
-  
-  if (currentFilename !== targetFilename) {
-    img.style.opacity = '0.85';
-    const tempImg = new Image();
-    tempImg.onload = () => {
-      img.src = src;
-      img.style.opacity = '1';
-    };
-    tempImg.src = src;
-  } else {
-    img.style.opacity = '1';
-  }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const blocks = document.querySelectorAll('.service-story-block');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const imgSrc = entry.target.getAttribute('data-img');
-        if (imgSrc) updateServiceImg(imgSrc);
+<script>
+(function() {
+  function updateServiceImg(src) {
+    const img = document.getElementById('serviceDynamicImg');
+    if (!img) return;
+    const currentFilename = img.src.split('/').pop().split('?')[0];
+    const targetFilename  = src.split('/').pop().split('?')[0];
+    if (currentFilename !== targetFilename) {
+      img.style.opacity = '0';
+      const tempImg = new Image();
+      tempImg.onload = () => { img.src = src; img.style.opacity = '1'; };
+      tempImg.src = src;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const blocks  = Array.from(document.querySelectorAll('.service-story-block'));
+    const imgEl   = document.getElementById('serviceDynamicImg');
+    const frame   = document.querySelector('.service-display-frame');
+    if (!blocks.length || !frame) return;
+
+    function getActiveBlock() {
+      // Center Y of the sticky image frame in viewport coordinates
+      const frameRect    = frame.getBoundingClientRect();
+      const imageCenterY = frameRect.top + frameRect.height / 2;
+
+      let   closest      = null;
+      let   closestDist  = Infinity;
+
+      blocks.forEach(block => {
+        const rect     = block.getBoundingClientRect();
+        const blockCenterY = rect.top + rect.height / 2;
+        const dist     = Math.abs(blockCenterY - imageCenterY);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest     = block;
+        }
+      });
+
+      // Only swap if this block's center is within 120px of the image center
+      // (i.e., content is almost directly in front of the image)
+      if (closest && closestDist < 140) {
+        const src = closest.getAttribute('data-img');
+        if (src) updateServiceImg(src);
       }
-    });
-  }, { threshold: 0.35 });
-  
-  blocks.forEach(b => observer.observe(b));
-});
+    }
+
+    // Run on scroll & on load
+    window.addEventListener('scroll', getActiveBlock, { passive: true });
+    getActiveBlock();
+  });
+})();
 </script>
 
 <!-- ═══ SECTION 10: INDUSTRIES (PINNED IMAGE SWITCHER) ═══ -->
@@ -553,88 +604,115 @@ function switchIndustry(key, btnElem) {
 }
 </script>
 
-<!-- ═══ SECTION 11: TECHNOLOGY ECOSYSTEM ═══ -->
+<!-- ═══ SECTION 11: SOFTWARE EXPERTISE & TECHNOLOGY ECOSYSTEM ═══ -->
 <section class="tech-ecosystem-sec" id="technology-ecosystem">
   <div class="container-editorial">
     
     <!-- Centered Section Title at Top -->
     <div style="text-align:center;max-width:800px;margin:0 auto 3rem;">
-      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem);color:var(--ivory);line-height:1.15;">
+      <h2 class="serif-heading" style="font-size:clamp(2.5rem, 4vw, 3.75rem);color:var(--midnight);line-height:1.15;">
         Software Expertise
       </h2>
       <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
-      <p style="font-size:1.0625rem;color:var(--ivory-3);margin-top:1.25rem;">
+      <p style="font-size:1.0625rem;color:var(--slate);margin-top:1.25rem;line-height:1.8;">
         Native integration with North America’s leading accounting platforms, ERP systems, payroll networks, and financial intelligence tools.
       </p>
     </div>
-  </div>
 
-  <!-- Full-Width 100vw Infinite Moving Ticker / Marquee with Real Official Vector Logos -->
-  <div class="tech-marquee-wrapper">
-    <div class="tech-marquee-track">
+    <!-- 12-Item 2x6 Structured Luxury Grid -->
+    <div class="tech-grid-container">
       
-      <!-- Set 1 -->
-      <div class="tech-node-item">
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/quickbooks.svg" alt="QuickBooks Online Logo" />
+          <img src="images/logos/quickbooks.png" alt="QuickBooks Online Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">QuickBooks Online</div>
           <div class="tech-node-cat">Core Accounting</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/xero.svg" alt="Xero Logo" />
+          <img src="images/logos/xero.png" alt="Xero Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Xero</div>
           <div class="tech-node-cat">Cloud Accounting</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/bill.svg" alt="Bill.com Logo" />
+          <img src="images/logos/netsuite.png" alt="Oracle NetSuite Logo" />
+        </div>
+        <div class="tech-info-wrap">
+          <div class="tech-node-name">Oracle NetSuite</div>
+          <div class="tech-node-cat">Enterprise ERP</div>
+        </div>
+      </div>
+
+      <div class="tech-card-item">
+        <div class="tech-logo-icon">
+          <img src="images/logos/sap.png" alt="SAP Business One Logo" />
+        </div>
+        <div class="tech-info-wrap">
+          <div class="tech-node-name">SAP Business One</div>
+          <div class="tech-node-cat">Enterprise ERP</div>
+        </div>
+      </div>
+
+      <div class="tech-card-item">
+        <div class="tech-logo-icon">
+          <img src="images/logos/bill.png" alt="Bill.com Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Bill.com</div>
           <div class="tech-node-cat">AP &amp; AR Automation</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/gusto.svg" alt="Gusto Logo" />
+          <img src="images/logos/gusto.png" alt="Gusto Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Gusto</div>
           <div class="tech-node-cat">Payroll Processing</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/dext.svg" alt="Dext Prepare Logo" />
+          <img src="images/logos/sage.png" alt="Sage Intacct Logo" />
+        </div>
+        <div class="tech-info-wrap">
+          <div class="tech-node-name">Sage Intacct</div>
+          <div class="tech-node-cat">Financial Management</div>
+        </div>
+      </div>
+
+      <div class="tech-card-item">
+        <div class="tech-logo-icon">
+          <img src="images/logos/dext.png" alt="Dext Prepare Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Dext Prepare</div>
           <div class="tech-node-cat">Receipt Capture</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/stripe.svg" alt="Stripe Logo" />
+          <img src="images/logos/stripe.png" alt="Stripe Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Stripe</div>
           <div class="tech-node-cat">Payment Merchant</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
           <img src="images/logos/hubdoc.svg" alt="Hubdoc Logo" />
         </div>
@@ -643,30 +721,20 @@ function switchIndustry(key, btnElem) {
           <div class="tech-node-cat">Document Fetch</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/expensify.svg" alt="Expensify Logo" />
+          <img src="images/logos/expensify.png" alt="Expensify Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Expensify</div>
           <div class="tech-node-cat">Expense Management</div>
         </div>
       </div>
-      
-      <div class="tech-node-item">
+
+      <div class="tech-card-item">
         <div class="tech-logo-icon">
-          <img src="images/logos/netsuite.svg" alt="Oracle NetSuite Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Oracle NetSuite</div>
-          <div class="tech-node-cat">Enterprise ERP</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/powerbi.svg" alt="Power BI Logo" />
+          <img src="images/logos/powerbi.png" alt="Power BI Logo" />
         </div>
         <div class="tech-info-wrap">
           <div class="tech-node-name">Power BI</div>
@@ -674,108 +742,8 @@ function switchIndustry(key, btnElem) {
         </div>
       </div>
 
-      <!-- Duplicated Set 2 for Seamless Infinite Loop -->
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/quickbooks.svg" alt="QuickBooks Online Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">QuickBooks Online</div>
-          <div class="tech-node-cat">Core Accounting</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/xero.svg" alt="Xero Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Xero</div>
-          <div class="tech-node-cat">Cloud Accounting</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/bill.svg" alt="Bill.com Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Bill.com</div>
-          <div class="tech-node-cat">AP &amp; AR Automation</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/gusto.svg" alt="Gusto Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Gusto</div>
-          <div class="tech-node-cat">Payroll Processing</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/dext.svg" alt="Dext Prepare Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Dext Prepare</div>
-          <div class="tech-node-cat">Receipt Capture</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/stripe.svg" alt="Stripe Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Stripe</div>
-          <div class="tech-node-cat">Payment Merchant</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/hubdoc.svg" alt="Hubdoc Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Hubdoc</div>
-          <div class="tech-node-cat">Document Fetch</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/expensify.svg" alt="Expensify Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Expensify</div>
-          <div class="tech-node-cat">Expense Management</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/netsuite.svg" alt="Oracle NetSuite Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Oracle NetSuite</div>
-          <div class="tech-node-cat">Enterprise ERP</div>
-        </div>
-      </div>
-      
-      <div class="tech-node-item">
-        <div class="tech-logo-icon">
-          <img src="images/logos/powerbi.svg" alt="Power BI Logo" />
-        </div>
-        <div class="tech-info-wrap">
-          <div class="tech-node-name">Power BI</div>
-          <div class="tech-node-cat">Financial Analytics</div>
-        </div>
-      </div>
-      
     </div>
+
   </div>
 </section>
 
@@ -792,7 +760,7 @@ function switchIndustry(key, btnElem) {
     
     <!-- Centered Section Header -->
     <div class="cpa-compact-header">
-      <h2 class="cpa-compact-title">Why CPA Firms Partner With Lekhankan</h2>
+      <h2 class="cpa-compact-title">Why CPA Firms Partner With Us</h2>
       <div class="cpa-compact-title-line"></div>
       <p class="cpa-compact-sub">
         Expand client capacity and scale your practice with dedicated, CA-supervised offshore accounting support.
@@ -933,42 +901,53 @@ function switchIndustry(key, btnElem) {
   </div>
 </section>
 
-<!-- ═══ SECTION: ABOUT LEKHANKAN (EDITORIAL MAGAZINE TYPOGRAPHY - NO BOXES) ═══ -->
-<section class="about-overlap-sec" id="about-story" style="padding:4.5rem 0 5rem;background:var(--ivory);position:relative;">
-  <div class="container-editorial" style="max-width:1120px;margin:0 auto;">
+<!-- ═══ SECTION: ABOUT LEKHANKAN (WITH HERITAGE SCROLL & FULL ORIGINAL CONTENT) ═══ -->
+<section class="about-overlap-sec" id="about-story">
+  <div class="container-editorial">
     
-    <div style="display:grid;grid-template-columns: 0.85fr 1.35fr;gap:4rem;align-items:start;">
+    <div class="about-split-layout">
       
-      <!-- Left Column: Large Editorial Title & Saffron Divider (NO BOX) -->
-      <div>
-        <h2 class="serif-heading" style="font-size:clamp(2.4rem, 4.5vw, 3.6rem);color:var(--midnight);margin:0 0 1.25rem;line-height:1.08;letter-spacing:-0.01em;">
-          ABOUT <br/><span style="color:var(--saffron);">LEKHANKAN</span>
-        </h2>
-        <div style="width:50px;height:4px;background:var(--saffron);border-radius:2px;"></div>
+      <!-- LEFT: BORDERLESS ANCIENT PARCHMENT SCROLL WITH SANSKRIT TEXT WRITTEN DIRECTLY ON IT -->
+      <div class="scroll-heritage-wrapper">
+        <div class="scroll-letter-box">
+          <!-- Raw Cutout Scroll Image (No borders, No boxes) -->
+          <img src="images/parchment_scroll_cutout.png" alt="Lekhankan Sanskrit Heritage Ancient Scroll" class="scroll-paper-img" />
+          
+          <!-- Calligraphy Heritage Passage Written Directly ON TOP of the Scroll Paper -->
+          <div class="scroll-passage-overlay">
+            <p class="scroll-passage-text">
+              <span class="scroll-dropcap">"L</span>ekhankan" is derived from the Sanskrit and Hindi word for accounting and systematic record-keeping. It reflects our commitment to precision, transparency, and disciplined financial management. While our name reflects our heritage, our services are built for modern businesses across North America using world-class cloud accounting technology.
+            </p>
+          </div>
+        </div>
       </div>
-      
-      <!-- Right Column: 3 Paragraphs in Magazine Editorial Typography (NO BOXES) -->
-      <div style="display:flex;flex-direction:column;gap:1.75rem;">
-        
-        <!-- Paragraph 1: Featured Italic Serif Lead Paragraph -->
-        <p style="font-family:var(--font-serif);font-size:1.25rem;color:var(--midnight);line-height:1.65;margin:0;font-style:italic;border-left:3px solid var(--saffron);padding-left:1.25rem;">
+
+      <!-- RIGHT: FULL ORIGINAL ABOUT LEKHANKAN CONTENT -->
+      <div class="about-main-narrative">
+        <h2 class="serif-heading about-main-title">
+          ABOUT <span class="text-saffron">LEKHANKAN</span>
+        </h2>
+        <div class="title-accent-line"></div>
+
+        <!-- Featured Italic Lead Paragraph (Full Original Content) -->
+        <p class="about-lead-paragraph">
           Lekhankan is an Accounting Knowledge Process Outsourcing (KPO) company built on the philosophy of combining accounting expertise with modern technology.
         </p>
-        
-        <!-- Paragraph 2 & 3 in 2-Column Body Layout -->
-        <div style="display:grid;grid-template-columns: repeat(2, 1fr);gap:1.75rem;">
-          <p style="font-size:1rem;color:var(--slate);line-height:1.7;margin:0;">
+
+        <!-- 2-Column Original Body Paragraphs -->
+        <div class="about-body-grid">
+          <p class="about-body-text">
             We help businesses simplify accounting operations, improve reporting accuracy, and create scalable finance functions through dedicated offshore accounting teams.
           </p>
-          <p style="font-size:1rem;color:var(--slate);line-height:1.7;margin:0;">
+          <p class="about-body-text">
             Our goal is not only to maintain books but to build long-term financial partnerships that create measurable business value.
           </p>
         </div>
-        
+
       </div>
-      
+
     </div>
-    
+
   </div>
 </section>
 

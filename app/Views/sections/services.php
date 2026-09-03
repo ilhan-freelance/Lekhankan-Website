@@ -16,7 +16,7 @@
         </div>
 
         <div class="service-display-frame">
-          <img id="serviceDynamicImg" src="images/bookkeeping_portrait.png" alt="Lekhankan Accounting Service Detail" style="opacity:1; transition:opacity 0.25s ease; width:100%; height:100%; object-fit:cover;"/>
+          <img id="serviceDynamicImg" src="images/bookkeeping_horizontal.png" alt="Lekhankan Accounting Service Detail" style="opacity:1; transition:opacity 0.25s ease; width:100%; height:100%; object-fit:cover;"/>
         </div>
       </div>
       
@@ -24,7 +24,7 @@
       <div class="services-content-scroll">
         
         <!-- 01 Bookkeeping Services -->
-        <div class="service-story-block" data-img="images/bookkeeping_portrait.png" onmouseenter="updateServiceImg('images/bookkeeping_portrait.png')">
+        <div class="service-story-block" data-img="images/bookkeeping_horizontal.png" onmouseenter="updateServiceImg('images/bookkeeping_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 01</div>
           <h3 class="service-story-title">OFFSHORE BOOKKEEPING SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -44,7 +44,7 @@
         </div>
         
         <!-- 02 Accounting Outsourcing -->
-        <div class="service-story-block" data-img="images/accounting_outsourcing_portrait.png" onmouseenter="updateServiceImg('images/accounting_outsourcing_portrait.png')">
+        <div class="service-story-block" data-img="images/accounting_outsourcing_horizontal.png" onmouseenter="updateServiceImg('images/accounting_outsourcing_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 02</div>
           <h3 class="service-story-title">ACCOUNTING OUTSOURCING SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -62,7 +62,7 @@
         </div>
         
         <!-- 03 Accounts Payable Outsourcing -->
-        <div class="service-story-block" data-img="images/accounts_payable_portrait.png" onmouseenter="updateServiceImg('images/accounts_payable_portrait.png')">
+        <div class="service-story-block" data-img="images/accounts_payable_horizontal.png" onmouseenter="updateServiceImg('images/accounts_payable_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 03</div>
           <h3 class="service-story-title">ACCOUNTS PAYABLE OUTSOURCING</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -80,7 +80,7 @@
         </div>
 
         <!-- 04 Accounts Receivable Services -->
-        <div class="service-story-block" data-img="images/accounts_receivable_portrait.png" onmouseenter="updateServiceImg('images/accounts_receivable_portrait.png')">
+        <div class="service-story-block" data-img="images/accounts_receivable_horizontal.png" onmouseenter="updateServiceImg('images/accounts_receivable_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 04</div>
           <h3 class="service-story-title">ACCOUNTS RECEIVABLE SERVICES</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -98,7 +98,7 @@
         </div>
         
         <!-- 05 Payroll Accounting Support -->
-        <div class="service-story-block" data-img="images/payroll_accounting_portrait.png" onmouseenter="updateServiceImg('images/payroll_accounting_portrait.png')">
+        <div class="service-story-block" data-img="images/payroll_accounting_horizontal.png" onmouseenter="updateServiceImg('images/payroll_accounting_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 05</div>
           <h3 class="service-story-title">PAYROLL ACCOUNTING SUPPORT</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -115,7 +115,7 @@
         </div>
 
         <!-- 06 Financial Reporting -->
-        <div class="service-story-block" data-img="images/financial_reporting_portrait.png" onmouseenter="updateServiceImg('images/financial_reporting_portrait.png')">
+        <div class="service-story-block" data-img="images/financial_reporting_horizontal.png" onmouseenter="updateServiceImg('images/financial_reporting_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 06</div>
           <h3 class="service-story-title">FINANCIAL REPORTING &amp; INTELLIGENCE</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -133,7 +133,7 @@
         </div>
 
         <!-- 07 Virtual Accounting Department -->
-        <div class="service-story-block" data-img="images/virtual_dept_portrait.png" onmouseenter="updateServiceImg('images/virtual_dept_portrait.png')">
+        <div class="service-story-block" data-img="images/virtual_dept_horizontal.png" onmouseenter="updateServiceImg('images/virtual_dept_horizontal.png')">
           <div class="eyebrow-tag eyebrow-no-line">SERVICE 07</div>
           <h3 class="service-story-title">VIRTUAL ACCOUNTING DEPARTMENT</h3>
           <p style="color:var(--slate);line-height:1.8;">
@@ -156,38 +156,57 @@
   </div>
 </section>
 
-<script>
-function updateServiceImg(src) {
-  const img = document.getElementById('serviceDynamicImg');
-  if (!img) return;
-  
-  const currentFilename = img.src.split('/').pop().split('?')[0];
-  const targetFilename = src.split('/').pop().split('?')[0];
-  
-  if (currentFilename !== targetFilename) {
-    img.style.opacity = '0.85';
-    const tempImg = new Image();
-    tempImg.onload = () => {
-      img.src = src;
-      img.style.opacity = '1';
-    };
-    tempImg.src = src;
-  } else {
-    img.style.opacity = '1';
-  }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  const blocks = document.querySelectorAll('.service-story-block');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const imgSrc = entry.target.getAttribute('data-img');
-        if (imgSrc) updateServiceImg(imgSrc);
+<script>
+(function() {
+  function updateServiceImg(src) {
+    const img = document.getElementById('serviceDynamicImg');
+    if (!img) return;
+    const currentFilename = img.src.split('/').pop().split('?')[0];
+    const targetFilename  = src.split('/').pop().split('?')[0];
+    if (currentFilename !== targetFilename) {
+      img.style.opacity = '0';
+      const tempImg = new Image();
+      tempImg.onload = () => { img.src = src; img.style.opacity = '1'; };
+      tempImg.src = src;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const blocks  = Array.from(document.querySelectorAll('.service-story-block'));
+    const imgEl   = document.getElementById('serviceDynamicImg');
+    const frame   = document.querySelector('.service-display-frame');
+    if (!blocks.length || !frame) return;
+
+    function getActiveBlock() {
+      // Center Y of the sticky image frame in viewport coordinates
+      const frameRect    = frame.getBoundingClientRect();
+      const imageCenterY = frameRect.top + frameRect.height / 2;
+
+      let   closest      = null;
+      let   closestDist  = Infinity;
+
+      blocks.forEach(block => {
+        const rect     = block.getBoundingClientRect();
+        const blockCenterY = rect.top + rect.height / 2;
+        const dist     = Math.abs(blockCenterY - imageCenterY);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest     = block;
+        }
+      });
+
+      // Only swap if this block's center is within 120px of the image center
+      // (i.e., content is almost directly in front of the image)
+      if (closest && closestDist < 140) {
+        const src = closest.getAttribute('data-img');
+        if (src) updateServiceImg(src);
       }
-    });
-  }, { threshold: 0.35 });
-  
-  blocks.forEach(b => observer.observe(b));
-});
+    }
+
+    // Run on scroll & on load
+    window.addEventListener('scroll', getActiveBlock, { passive: true });
+    getActiveBlock();
+  });
+})();
 </script>
