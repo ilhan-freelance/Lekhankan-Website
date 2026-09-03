@@ -4118,10 +4118,21 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   FRAME-PERFECT SECTION VIEWPORT SYSTEM (1 SECTION = 1 SCREEN FRAME)
+   FRAME-PERFECT SECTION VIEWPORT SYSTEM (1 SECTION = 1 FULL SCREEN 100VH)
    ═══════════════════════════════════════════════════════════════════ */
 
-.ancient-halstein-hero,
+.ancient-halstein-hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
 .why-diagram-sec,
 .services-pinned-sec,
 .industry-sec,
@@ -4131,17 +4142,17 @@ h1, h2, h3, h4, h5 {
 .process-sec,
 .team-sec,
 .lead-form-sec {
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  padding: 4.25rem 0;
+  padding: 4.5rem 0;
   position: relative;
 }
 
 .trust-strip-sec {
-  padding: 2.25rem 0;
+  padding: 2.5rem 0;
 }
 
 
