@@ -50,7 +50,6 @@
 
       <!-- 1. Amit Modi -->
       <div class="roster-card">
-        <span class="roster-dept-badge">TECH</span>
         <div class="roster-avatar">AM</div>
         <h3 class="roster-name">Amit Modi</h3>
         <div class="roster-role">Cloud Infrastructure Lead</div>
@@ -63,7 +62,6 @@
 
       <!-- 2. Akash Khodwal -->
       <div class="roster-card">
-        <span class="roster-dept-badge">TECH</span>
         <div class="roster-avatar">AK</div>
         <h3 class="roster-name">Akash Khodwal <small>(IIT Kharagpur)</small></h3>
         <div class="roster-role">Automation &amp; Architecture</div>
@@ -76,7 +74,6 @@
 
       <!-- 3. Ritesh Vijay -->
       <div class="roster-card">
-        <span class="roster-dept-badge">FINANCE</span>
         <div class="roster-avatar">RV</div>
         <h3 class="roster-name">Ritesh Vijay</h3>
         <div class="roster-role">Senior Accounting Review</div>
@@ -89,7 +86,6 @@
 
       <!-- 4. Ayushi Agrawal -->
       <div class="roster-card">
-        <span class="roster-dept-badge">OPERATIONS</span>
         <div class="roster-avatar">AA</div>
         <h3 class="roster-name">Ayushi Agrawal</h3>
         <div class="roster-role">Bookkeeping Operations</div>
@@ -102,7 +98,6 @@
 
       <!-- 5. Harshita Maheshwari -->
       <div class="roster-card">
-        <span class="roster-dept-badge">OPERATIONS</span>
         <div class="roster-avatar">HM</div>
         <h3 class="roster-name">Harshita Maheshwari</h3>
         <div class="roster-role">Reconciliation &amp; Compliance</div>
@@ -115,7 +110,6 @@
 
       <!-- 6. Vishal Agrawal -->
       <div class="roster-card">
-        <span class="roster-dept-badge">FINANCE</span>
         <div class="roster-avatar">VA</div>
         <h3 class="roster-name">Vishal Agrawal</h3>
         <div class="roster-role">Financial Analysis</div>
@@ -128,7 +122,6 @@
 
       <!-- 7. ParthJeet Singh Hada -->
       <div class="roster-card">
-        <span class="roster-dept-badge">OPERATIONS</span>
         <div class="roster-avatar">PSH</div>
         <h3 class="roster-name">ParthJeet Singh Hada</h3>
         <div class="roster-role">Process Management</div>
@@ -141,7 +134,6 @@
 
       <!-- 8. Pallavi Modi -->
       <div class="roster-card">
-        <span class="roster-dept-badge">PEOPLE</span>
         <div class="roster-avatar">PM</div>
         <h3 class="roster-name">Pallavi Modi</h3>
         <div class="roster-role">Human Resources</div>
@@ -154,7 +146,6 @@
 
       <!-- 9. Muskan Khatri -->
       <div class="roster-card">
-        <span class="roster-dept-badge">MARKETING</span>
         <div class="roster-avatar">MK</div>
         <h3 class="roster-name">Muskan Khatri</h3>
         <div class="roster-role">Digital Marketing &amp; BD</div>
