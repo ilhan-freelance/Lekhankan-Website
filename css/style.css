@@ -1464,7 +1464,7 @@ h1, h2, h3, h4, h5 {
 
 /* ── ABOUT / OVERLAPPING VISUAL COMPOSITION ── */
 .about-overlap-sec {
-  padding: 8rem 0 10rem;
+  padding: 3.5rem 0 4rem;
   background-color: var(--ivory);
   position: relative;
 }
@@ -3208,13 +3208,13 @@ h1, h2, h3, h4, h5 {
     gap: 0.75rem;
 }
 
-/* ── SECTION: ABOUT LEKHANKAN (FULL 100VH FRAME LAYOUT WITH SLEEK LIGHT PADDING) ── */
+/* ── SECTION: ABOUT LEKHANKAN (SLEEK FRAME LAYOUT WITH COMPACT PADDING) ── */
 .about-overlap-sec {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 0;
+  padding: 3.5rem 0 4rem;
   background: var(--ivory);
   position: relative;
   overflow: hidden;
@@ -3386,3 +3386,323 @@ h1, h2, h3, h4, h5 {
     gap: 3rem;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   SECTION: OUR PROCESS — Chevron Arrow Pipeline (Official Brand Palette)
+   Background: Pure White · Cards: Lekhankan Midnight Navy (#17233C) & Saffron Gold (#C98A32)
+   ═══════════════════════════════════════════════════════════════════ */
+
+.process-sec {
+  padding: 6rem 0 6.5rem;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.proc-hdr-area {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.proc-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--midnight);
+  margin: 0 0 0.85rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.proc-headline em {
+  font-style: italic;
+  color: var(--saffron);
+}
+
+.proc-subline {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--slate);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Pipeline Outer Container */
+.proc-pipeline-outer {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Pipeline Flex Row */
+.proc-pipeline {
+  display: flex;
+  align-items: stretch;
+  filter: drop-shadow(0 14px 36px rgba(23, 35, 60, 0.15));
+}
+
+/* Individual Arrow */
+.proc-arrow {
+  flex: 1;
+  position: relative;
+  min-height: 325px;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%, 30px 50%);
+  margin-left: -15px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.proc-arrow:first-child {
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 50%, calc(100% - 30px) 100%, 0 100%);
+  margin-left: 0;
+  z-index: 7;
+}
+
+.proc-arrow:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 30px 50%);
+  z-index: 1;
+}
+
+/* Lekhankan Brand Midnight Navy Palette with Elegant Graduating Shifts */
+.proc-arrow.pa-1 { z-index: 7; background: linear-gradient(160deg, #111C2E 0%, #17233C 100%); }
+.proc-arrow.pa-2 { z-index: 6; background: linear-gradient(160deg, #142034 0%, #1B2945 100%); }
+.proc-arrow.pa-3 { z-index: 5; background: linear-gradient(160deg, #17243A 0%, #1F2E4C 100%); }
+.proc-arrow.pa-4 { z-index: 4; background: linear-gradient(160deg, #1A2840 0%, #223354 100%); }
+.proc-arrow.pa-5 { z-index: 3; background: linear-gradient(160deg, #1C2C46 0%, #25385A 100%); }
+.proc-arrow.pa-6 { z-index: 2; background: linear-gradient(160deg, #1E2F4B 0%, #283D61 100%); }
+.proc-arrow.pa-7 { z-index: 1; background: linear-gradient(160deg, #203352 0%, #2B4268 100%); }
+
+/* Subtle Saffron Vertical Edge Divider */
+.proc-arrow::after {
+  content: '';
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 2px;
+  height: 84%;
+  background: linear-gradient(180deg, transparent, rgba(201, 138, 50, 0.4) 30%, var(--saffron) 50%, rgba(201, 138, 50, 0.4) 70%, transparent);
+  z-index: 20;
+}
+.proc-arrow:last-child::after { display: none; }
+
+/* ELEGANT BRAND HOVER STATE */
+.proc-arrow:hover {
+  transform: translateY(-8px);
+  z-index: 25 !important;
+  filter: drop-shadow(0 20px 40px rgba(23, 35, 60, 0.3)) drop-shadow(0 0 16px rgba(201, 138, 50, 0.25));
+}
+
+/* Light Sweep Keyframe Animation for Advanced Hover Effect */
+@keyframes lightSweep {
+  0% { transform: translateX(-100%) rotate(15deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%) rotate(15deg); opacity: 0; }
+}
+
+/* Inner Content Layout — Enforced Fixed Slots for 100% Equal Baseline Alignment */
+.proc-arrow-inner {
+  padding: 2.2rem 1.6rem 2.4rem 2.4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.proc-arrow:first-child .proc-arrow-inner { padding-left: 2rem; }
+.proc-arrow:last-child .proc-arrow-inner { padding-right: 2rem; }
+
+/* Light Shimmer Beam Element on Hover */
+.proc-arrow-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.15) 50%, transparent 80%);
+  pointer-events: none;
+  z-index: 15;
+}
+
+.proc-arrow:hover .proc-arrow-inner::before {
+  animation: lightSweep 0.75s ease-in-out;
+}
+
+/* ADVANCED INTERACTIVE HOVER EFFECT ON CARD */
+.proc-arrow:hover {
+  transform: translateY(-10px);
+  z-index: 25 !important;
+  filter: drop-shadow(0 20px 40px rgba(23, 35, 60, 0.4)) drop-shadow(0 0 20px rgba(245, 158, 11, 0.4));
+}
+
+/* Fixed Slot 1: Step Number — Equal Height (38px) across all cards */
+.pa-num {
+  font-family: var(--font-sans);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #F59E0B;
+  line-height: 1;
+  height: 38px;
+  margin-bottom: 0.6rem;
+  align-self: flex-start;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.proc-arrow:hover .pa-num {
+  color: #FBBF24;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Fixed Slot 2: Step Title — 100% Pixel-Perfect Equal Baseline Alignment */
+.pa-title {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  height: 56px;
+  margin: 0 0 1.6rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  transition: color 0.35s ease;
+}
+
+.pa-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 3.5px;
+  background: #F59E0B;
+  transition: var(--transition);
+  border-radius: 4px;
+}
+
+.proc-arrow:hover .pa-title {
+  color: #FFFFFF;
+}
+
+.proc-arrow:hover .pa-title::after {
+  width: 60px;
+  background: #FBBF24;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+}
+
+/* Fixed Slot 3: Icon Container — Fixed Height (60px) */
+.pa-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(245, 158, 11, 0.18);
+  border: 1.5px solid #F59E0B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.1rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.pa-icon svg {
+  color: #F59E0B;
+  width: 26px;
+  height: 26px;
+  display: block;
+  transition: var(--transition);
+}
+
+.proc-arrow:hover .pa-icon {
+  background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+  border-color: #FBBF24;
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.5);
+  transform: translateY(-3px) scale(1.12);
+}
+
+.proc-arrow:hover .pa-icon svg {
+  color: #0F172A;
+  transform: scale(1.05);
+}
+
+/* Fixed Slot 4: Description Text — Flexible Fill */
+.pa-desc {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #F8FAFC;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: color 0.35s ease;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.proc-arrow:hover .pa-desc {
+  color: #FFFFFF;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+  .proc-pipeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    filter: none;
+  }
+  .proc-arrow,
+  .proc-arrow:first-child,
+  .proc-arrow:last-child {
+    clip-path: none;
+    margin-left: 0;
+    border-right: 3px solid rgba(201, 138, 50, 0.25);
+    border-bottom: 3px solid rgba(201, 138, 50, 0.1);
+    min-height: auto;
+  }
+  .proc-arrow:last-child,
+  .proc-arrow:nth-child(4n) { border-right: none; }
+  .proc-arrow::after { display: none; }
+  .proc-arrow:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.1);
+  }
+  .proc-arrow-inner { padding: 1.75rem 1.4rem; }
+  .proc-arrow:first-child .proc-arrow-inner,
+  .proc-arrow:last-child .proc-arrow-inner { padding: 1.75rem 1.4rem; }
+}
+
+@media (max-width: 768px) {
+  .proc-pipeline { grid-template-columns: repeat(2, 1fr); }
+  .proc-arrow:nth-child(4n) { border-right: 3px solid rgba(201, 138, 50, 0.25); }
+  .proc-arrow:nth-child(2n) { border-right: none; }
+  .pa-num { font-size: 2rem; }
+  .pa-title { font-size: 1.1rem; }
+}
+
+@media (max-width: 480px) {
+  .proc-pipeline { grid-template-columns: 1fr; }
+  .proc-arrow { border-right: none !important; }
+  .proc-arrow-inner { padding: 1.5rem; }
+}
+
+
+
