@@ -3084,14 +3084,14 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   WAVE FOOTER DESIGN (MATCHING REFERENCE IMAGE & LEKHANKAN BRAND)
+   LIGHT ORGANIC WAVE FOOTER DESIGN (EXACT REFERENCE MATCH)
    ═══════════════════════════════════════════════════════════════════ */
 
 .lk-footer {
-  background-color: #111C2E;
-  color: #94A3B8;
+  background-color: #EFE8DB;
+  color: #334155;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   padding: 0 0 2.5rem;
 }
 
@@ -3099,7 +3099,7 @@ h1, h2, h3, h4, h5 {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  margin-top: -4rem;
+  margin-top: -4.5rem;
   position: relative;
   z-index: 1;
 }
@@ -3108,7 +3108,7 @@ h1, h2, h3, h4, h5 {
   position: relative;
   display: block;
   width: 100%;
-  height: 95px;
+  height: 100px;
 }
 
 .footer-inner {
@@ -3119,16 +3119,17 @@ h1, h2, h3, h4, h5 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
-  gap: 3rem;
+  grid-template-columns: 1.2fr 1fr 1.2fr 1.3fr;
+  gap: 3.5rem;
   padding-bottom: 2.5rem;
+  align-items: start;
 }
 
 .footer-col-title {
   font-family: var(--font-sans);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #17233C;
   margin: 0 0 1.25rem;
   letter-spacing: 0.01em;
 }
@@ -3141,47 +3142,51 @@ h1, h2, h3, h4, h5 {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
 }
 
 .footer-links a {
-  color: #94A3B8;
+  color: #334155;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.25s ease;
 }
 
 .footer-links a:hover {
-  color: #F59E0B;
+  color: #C98A32;
 }
 
 .footer-links-static li {
-  color: #94A3B8;
-  line-height: 1.5;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.55;
 }
 
 .footer-copyright-left {
-  margin-top: 1.75rem;
-  font-size: 0.82rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
   color: #64748B;
   font-weight: 600;
 }
 
-/* Follow Us Right Column & Circular Badges */
+/* Follow Us Right Column & Circular Dark Badges */
 .footer-col-social {
   display: flex;
   flex-direction: column;
+  padding-top: 1rem;
 }
 
 .social-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 800;
+  color: #17233C;
+  margin-bottom: 1rem;
 }
 
 .footer-social-icons {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-top: 0.25rem;
 }
 
 .social-circle-btn {
@@ -3189,31 +3194,29 @@ h1, h2, h3, h4, h5 {
   height: 44px;
   border-radius: 50%;
   background: #17233C;
-  border: 1.5px solid rgba(245, 158, 11, 0.3);
-  color: #F59E0B;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(23, 35, 60, 0.2);
 }
 
 .social-circle-btn:hover {
-  background: #F59E0B;
-  color: #111C2E;
-  border-color: #F59E0B;
+  background: #C98A32;
+  color: #FFFFFF;
   transform: translateY(-3px) scale(1.08);
-  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 22px rgba(201, 138, 50, 0.4);
 }
 
-/* Bottom Legal Bar (Right Aligned) */
+/* Bottom Legal Bar (Right Aligned — Exact Reference Match) */
 .footer-bottom-bar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.83rem;
+  border-top: 1px solid rgba(23, 35, 60, 0.12);
+  font-size: 0.85rem;
 }
 
 .footer-legal-links {
@@ -3224,17 +3227,19 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer-legal-links a {
-  color: #94A3B8;
+  color: #334155;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .footer-legal-links a:hover {
-  color: #FFFFFF;
+  color: #17233C;
+  text-decoration: underline;
 }
 
 .footer-legal-links .sep {
-  color: #475569;
+  color: #94A3B8;
 }
 
 .floating-whatsapp-btn {
