@@ -1,5 +1,5 @@
 <!-- ═══ SECTION: CONTACT US (FORMAL LIGHT EDITORIAL DESIGN) ═══ -->
-<section class="lead-form-sec" id="lead-form" style="padding:5rem 0 5.5rem;background:var(--ivory);color:var(--midnight);position:relative;">
+<section class="lead-form-sec" id="lead-form" style="padding:5rem 0 5.5rem;background:#FFFFFF;color:var(--midnight);position:relative;">
   <div class="container-editorial" style="max-width:1160px;margin:0 auto;position:relative;z-index:2;">
     
     <!-- Section Title & Subheading -->
