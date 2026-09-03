@@ -4164,3 +4164,16 @@ h1, h2, h3, h4, h5 {
 .roster-card:hover .roster-avatar img {
   transform: scale(1.08);
 }
+
+/* Widescreen 3-Column Contact Form Responsive Breakdown */
+@media (max-width: 992px) {
+  .contact-3col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-3col-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
