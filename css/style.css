@@ -1464,7 +1464,7 @@ h1, h2, h3, h4, h5 {
 
 /* ── ABOUT / OVERLAPPING VISUAL COMPOSITION ── */
 .about-overlap-sec {
-  padding: 3.5rem 0 4rem;
+  padding: 4.75rem 0 5rem;
   background-color: var(--ivory);
   position: relative;
 }
@@ -3210,11 +3210,11 @@ h1, h2, h3, h4, h5 {
 
 /* ── SECTION: ABOUT LEKHANKAN (SLEEK FRAME LAYOUT WITH COMPACT PADDING) ── */
 .about-overlap-sec {
-  min-height: auto;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3.5rem 0 4rem;
+  padding: 4.75rem 0 5rem;
   background: var(--ivory);
   position: relative;
   overflow: hidden;
