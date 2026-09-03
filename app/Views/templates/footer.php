@@ -1,8 +1,8 @@
 <!-- ═══ FOOTER — Light Organic Wave Curve & 4-Column Layout ═══ -->
 <footer class="lk-footer">
   <div class="footer-wave-wrap">
-        <svg class="footer-wave-svg" viewBox="0 0 1440 140" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M 0, 30 C 260, -20 540, 20 800, 75 C 1040, 120 1260, 70 1440, 55 L 1440, 140 L 0, 140 Z" fill="#EFE8DB"></path>
+            <svg class="footer-wave-svg" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M 0,90 C 260,5 560,20 850,95 C 1150,160 1350,130 1440,110 L 1440,180 L 0,180 Z" fill="#EFE8DB"></path>
     </svg>
   </div>
 
