@@ -8,9 +8,6 @@
         Industries We Serve
       </h2>
       <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
-      <p style="font-size:1.0625rem;color:var(--slate);margin-top:1.25rem;">
-        Select your industry domain to view our tailored accounting, reconciliation, and reporting processes.
-      </p>
     </div>
     
     <div class="industry-switcher-grid">
