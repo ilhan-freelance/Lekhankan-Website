@@ -4,7 +4,6 @@
   <!-- Section Header -->
   <div class="proc-hdr-area">
     <h2 class="proc-headline">OUR <em>PROCESS</em></h2>
-    <p class="proc-subline">A structured seven-step framework ensuring precision, transparency, and consistent results for every engagement.</p>
   </div>
 
   <!-- Chevron Arrow Pipeline -->

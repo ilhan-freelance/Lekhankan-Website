@@ -5,7 +5,6 @@
     <!-- Section Header -->
     <div class="team-hdr-area">
       <h2 class="team-headline">OUR <em>TEAM</em></h2>
-      <p class="team-subline">The experienced finance leaders, Chartered Accountants, and technology architects driving your back-office success.</p>
     </div>
 
     <!-- 1. Executive Founders Duo Banner -->
