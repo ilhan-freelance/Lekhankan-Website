@@ -4,6 +4,7 @@
   <!-- Section Header -->
   <div class="proc-hdr-area">
     <h2 class="proc-headline">OUR <em>PROCESS</em></h2>
+    <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
   </div>
 
   <!-- Chevron Arrow Pipeline -->

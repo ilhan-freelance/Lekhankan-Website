@@ -5,6 +5,7 @@
     <!-- Section Header -->
     <div class="team-hdr-area">
       <h2 class="team-headline">OUR <em>TEAM</em></h2>
+      <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
     </div>
 
     <!-- 1. Executive Founders Duo Banner -->

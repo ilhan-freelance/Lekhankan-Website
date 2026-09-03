@@ -7,6 +7,7 @@
       <h2 class="serif-heading" style="font-size:clamp(2.6rem, 4.5vw, 3.8rem);color:var(--midnight);margin:0 0 1rem;line-height:1.1;">
         CONTACT <span style="color:var(--saffron);">US</span>
       </h2>
+      <div style="width:64px;height:3px;background:linear-gradient(90deg, var(--saffron), var(--gold));margin:1rem auto 0;border-radius:2px;"></div>
       <h3 style="font-family:var(--font-serif);font-size:1.35rem;color:var(--midnight);margin:0 0 0.85rem;font-weight:600;">
         Let's Build Your Offshore Accounting Team &bull; Book a Free Consultation
       </h3>
