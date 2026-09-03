@@ -3698,11 +3698,211 @@ h1, h2, h3, h4, h5 {
   .pa-title { font-size: 1.1rem; }
 }
 
-@media (max-width: 480px) {
-  .proc-pipeline { grid-template-columns: 1fr; }
-  .proc-arrow { border-right: none !important; }
-  .proc-arrow-inner { padding: 1.5rem; }
+/* ═══════════════════════════════════════════════════════════════════
+   SECTION: OUR TEAM — Executive Department Filter Grid
+   ═══════════════════════════════════════════════════════════════════ */
+
+.team-sec {
+  padding: 5rem 0 5.5rem;
+  background: var(--ivory-2, #FAFAF7);
+  position: relative;
 }
+
+.team-hdr-area {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.team-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 400;
+  color: var(--midnight);
+  margin: 0 0 0.6rem;
+  line-height: 1.15;
+}
+
+.team-headline em {
+  font-style: italic;
+  color: var(--saffron);
+}
+
+.team-subline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--slate);
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+/* Department Filter Bar */
+.team-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.team-filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--midnight);
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 35, 60, 0.14);
+  padding: 0.45rem 1.15rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.team-filter-btn:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+}
+
+.team-filter-btn.active {
+  background: var(--saffron);
+  border-color: var(--saffron);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(201, 138, 50, 0.3);
+}
+
+/* Executive Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.team-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 35, 60, 0.08);
+  border-top: 3px solid transparent;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(23, 35, 60, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  border-top-color: var(--saffron);
+  border-color: rgba(201, 138, 50, 0.3);
+  box-shadow: 0 14px 32px rgba(23, 35, 60, 0.09);
+}
+
+.team-card-inner {
+  padding: 1.6rem 1.25rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* Avatar Monogram Badge */
+.team-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #17233C 0%, #202F4F 100%);
+  border: 2px solid var(--saffron);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--saffron);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 4px 14px rgba(23, 35, 60, 0.12);
+  transition: transform 0.35s ease;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.06);
+  background: linear-gradient(135deg, var(--saffron) 0%, #B79A5B 100%);
+  color: #17233C;
+}
+
+/* Member Name */
+.team-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--midnight);
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
+}
+
+.team-name small {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--saffron);
+  font-weight: 700;
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* Role Badge */
+.team-role {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--saffron);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(201, 138, 50, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.85rem;
+  display: inline-block;
+  border: 1px solid rgba(201, 138, 50, 0.18);
+}
+
+/* Skill Tags */
+.team-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: auto;
+}
+
+.team-tags span {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #475569;
+  background: #F4F1EA;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Responsive Grid */
+@media (max-width: 1100px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-filter-bar { gap: 0.4rem; }
+  .team-filter-btn { font-size: 0.75rem; padding: 0.4rem 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+
 
 
 
