@@ -25,19 +25,26 @@
       <span class="nav-brand-sub">VRM VRINDAM PRIVATE LIMITED</span>
     </a>
     
+    <!-- MOBILE HAMBURGER TOGGLE BUTTON -->
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu" onclick="toggleMobileMenu()">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+
     <!-- RIGHT: REFERENCE STYLE MENU WITH ACTIVE DASH & ASTERISK -->
-    <nav class="nav-menu-wrapper">
+    <nav class="nav-menu-wrapper" id="navMenuWrapper">
       <ul class="nav-menu-list">
         <li>
-          <a href="#services-narrative" class="nav-item-link active">
+          <a href="#services-narrative" class="nav-item-link active" onclick="closeMobileMenu()">
             <span class="nav-dash">──</span> SERVICES
           </a>
         </li>
-        <li><a href="#industries-switcher" class="nav-item-link">INDUSTRIES</a></li>
-        <li><a href="#technology-ecosystem" class="nav-item-link">TECHNOLOGY</a></li>
-        <li><a href="#cpa-solutions" class="nav-item-link">CPA FIRMS</a></li>
-        <li><a href="#process-timeline" class="nav-item-link">PROCESS</a></li>
-        <li><a href="#about-story" class="nav-item-link">ABOUT</a></li>
+        <li><a href="#industries-switcher" class="nav-item-link" onclick="closeMobileMenu()">INDUSTRIES</a></li>
+        <li><a href="#technology-ecosystem" class="nav-item-link" onclick="closeMobileMenu()">TECHNOLOGY</a></li>
+        <li><a href="#cpa-solutions" class="nav-item-link" onclick="closeMobileMenu()">CPA FIRMS</a></li>
+        <li><a href="#process-timeline" class="nav-item-link" onclick="closeMobileMenu()">PROCESS</a></li>
+        <li><a href="#about-story" class="nav-item-link" onclick="closeMobileMenu()">ABOUT</a></li>
       </ul>
     </nav>
 
@@ -1226,11 +1233,11 @@ function switchIndustry(key, btnElem) {
     </div>
     
     <!-- Single Window Formal Form Box (Light Widescreen 3-Column Grid) -->
-    <div style="background:var(--white);border:1px solid var(--border-ivory);border-top:4px solid var(--saffron);border-radius:20px;padding:2.2rem 2.5rem;box-shadow:0 12px 36px rgba(0,0,0,0.04);">
+    <div class="contact-form-card">
       
       <form id="lekhankanLeadForm" onsubmit="handleFormSubmit(event)">
         
-        <div class="contact-3col-grid" style="display:grid;grid-template-columns: repeat(3, 1fr);gap:1.2rem;">
+        <div class="contact-3col-grid">
           
           <!-- Row 1: Basics -->
           <!-- 1. Full Name -->
@@ -1447,3 +1454,25 @@ function switchIndustry(key, btnElem) {
     </div>
   </div>
 </footer>
+
+<script>
+function toggleMobileMenu() {
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const menuWrapper = document.getElementById('navMenuWrapper');
+  if (toggleBtn && menuWrapper) {
+    toggleBtn.classList.toggle('active');
+    menuWrapper.classList.toggle('active');
+    document.body.style.overflow = menuWrapper.classList.contains('active') ? 'hidden' : '';
+  }
+}
+
+function closeMobileMenu() {
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const menuWrapper = document.getElementById('navMenuWrapper');
+  if (toggleBtn && menuWrapper && menuWrapper.classList.contains('active')) {
+    toggleBtn.classList.remove('active');
+    menuWrapper.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+</script>

@@ -87,3 +87,25 @@
     </div>
   </div>
 </footer>
+
+<script>
+function toggleMobileMenu() {
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const menuWrapper = document.getElementById('navMenuWrapper');
+  if (toggleBtn && menuWrapper) {
+    toggleBtn.classList.toggle('active');
+    menuWrapper.classList.toggle('active');
+    document.body.style.overflow = menuWrapper.classList.contains('active') ? 'hidden' : '';
+  }
+}
+
+function closeMobileMenu() {
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const menuWrapper = document.getElementById('navMenuWrapper');
+  if (toggleBtn && menuWrapper && menuWrapper.classList.contains('active')) {
+    toggleBtn.classList.remove('active');
+    menuWrapper.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+</script>

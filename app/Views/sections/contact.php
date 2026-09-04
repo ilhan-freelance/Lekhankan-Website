@@ -14,11 +14,11 @@
     </div>
     
     <!-- Single Window Formal Form Box (Light Widescreen 3-Column Grid) -->
-    <div style="background:var(--white);border:1px solid var(--border-ivory);border-top:4px solid var(--saffron);border-radius:20px;padding:2.2rem 2.5rem;box-shadow:0 12px 36px rgba(0,0,0,0.04);">
+    <div class="contact-form-card">
       
       <form id="lekhankanLeadForm" onsubmit="handleFormSubmit(event)">
         
-        <div class="contact-3col-grid" style="display:grid;grid-template-columns: repeat(3, 1fr);gap:1.2rem;">
+        <div class="contact-3col-grid">
           
           <!-- Row 1: Basics -->
           <!-- 1. Full Name -->
