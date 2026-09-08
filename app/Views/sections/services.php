@@ -20,8 +20,8 @@
         </div>
       </div>
       
-      <!-- Content Scrolling Side -->
-      <div class="services-content-scroll">
+      <!-- Content Scrolling Side (Inner Vertical Scroll) -->
+      <div class="services-content-scroll" id="servicesContentScroll">
         
         <!-- 01 Bookkeeping Services -->
         <div class="service-story-block" data-img="images/bookkeeping_horizontal.png" onmouseenter="updateServiceImg('images/bookkeeping_horizontal.png')">
@@ -171,42 +171,139 @@
       tempImg.src = src;
     }
   }
+  window.updateServiceImg = updateServiceImg;
 
   document.addEventListener('DOMContentLoaded', () => {
-    const blocks  = Array.from(document.querySelectorAll('.service-story-block'));
-    const imgEl   = document.getElementById('serviceDynamicImg');
-    const frame   = document.querySelector('.service-display-frame');
-    if (!blocks.length || !frame) return;
+    const sec       = document.getElementById('services-narrative');
+    const container = document.getElementById('servicesContentScroll');
+    const blocks    = Array.from(document.querySelectorAll('.service-story-block'));
+    if (!sec || !container || !blocks.length) return;
 
-    function getActiveBlock() {
-      // Center Y of the sticky image frame in viewport coordinates
-      const frameRect    = frame.getBoundingClientRect();
-      const imageCenterY = frameRect.top + frameRect.height / 2;
+    function syncActiveService() {
+      const containerRect = container.getBoundingClientRect();
+      const containerCenter = containerRect.top + containerRect.height / 2;
 
-      let   closest      = null;
-      let   closestDist  = Infinity;
+      let closest = null;
+      let closestDist = Infinity;
 
       blocks.forEach(block => {
-        const rect     = block.getBoundingClientRect();
-        const blockCenterY = rect.top + rect.height / 2;
-        const dist     = Math.abs(blockCenterY - imageCenterY);
+        const rect = block.getBoundingClientRect();
+        const blockCenter = rect.top + rect.height / 2;
+        const dist = Math.abs(blockCenter - containerCenter);
         if (dist < closestDist) {
           closestDist = dist;
-          closest     = block;
+          closest = block;
         }
       });
 
-      // Only swap if this block's center is within 120px of the image center
-      // (i.e., content is almost directly in front of the image)
-      if (closest && closestDist < 140) {
+      if (closest) {
         const src = closest.getAttribute('data-img');
         if (src) updateServiceImg(src);
+        blocks.forEach(b => b.classList.toggle('active-card', b === closest));
       }
     }
 
-    // Run on scroll & on load
-    window.addEventListener('scroll', getActiveBlock, { passive: true });
-    getActiveBlock();
+    container.addEventListener('scroll', syncActiveService, { passive: true });
+    syncActiveService();
+
+    // Wheel event routing: Instant seamless transition to website scroll at boundaries
+    sec.addEventListener('wheel', (e) => {
+      const isScrollingDown = e.deltaY > 0;
+      const isScrollingUp   = e.deltaY < 0;
+
+      const maxScroll  = container.scrollHeight - container.clientHeight;
+      const currScroll = container.scrollTop;
+
+      // 1. If at 7th service (bottom boundary) and scrolling DOWN -> Let website page scroll naturally!
+      if (isScrollingDown && currScroll >= maxScroll - 2) {
+        return;
+      }
+
+      // 2. If at 1st service (top boundary) and scrolling UP -> Let website page scroll naturally!
+      if (isScrollingUp && currScroll <= 2) {
+        return;
+      }
+
+      const secRect = sec.getBoundingClientRect();
+
+      // 3. When scrolling DOWN into section: section must first reach top of frame (secRect.top <= 120)
+      if (isScrollingDown && secRect.top > 120 && currScroll === 0) {
+        return;
+      }
+
+      // 4. When scrolling UP into section: section bottom must be in view
+      if (isScrollingUp && secRect.bottom < window.innerHeight - 100 && currScroll >= maxScroll - 2) {
+        return;
+      }
+
+      let amount = e.deltaY;
+      if (e.deltaMode === 1) {
+        amount *= 35;
+      } else if (e.deltaMode === 2) {
+        amount *= container.clientHeight;
+      }
+      amount *= 1.5;
+
+      const nextScroll = currScroll + amount;
+
+      // Reaching 7th service (bottom boundary): set to max and let website scroll immediately
+      if (isScrollingDown && nextScroll >= maxScroll) {
+        container.scrollTop = maxScroll;
+        return;
+      }
+
+      // Reaching 1st service (top boundary): set to 0 and let website scroll immediately
+      if (isScrollingUp && nextScroll <= 0) {
+        container.scrollTop = 0;
+        return;
+      }
+
+      // Inside bounds: intercept wheel and scroll inner cards container
+      e.preventDefault();
+      container.scrollTop = nextScroll;
+    }, { passive: false });
+
+    // Touch event routing for mobile devices
+    let touchStartY = 0;
+    sec.addEventListener('touchstart', (e) => {
+      if (e.touches.length) touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    sec.addEventListener('touchmove', (e) => {
+      if (!e.touches.length) return;
+      const touchY = e.touches[0].clientY;
+      const deltaY = touchStartY - touchY;
+      touchStartY = touchY;
+
+      const isScrollingDown = deltaY > 0;
+      const isScrollingUp   = deltaY < 0;
+
+      const maxScroll  = container.scrollHeight - container.clientHeight;
+      const currScroll = container.scrollTop;
+
+      if (isScrollingDown && currScroll >= maxScroll - 2) return;
+      if (isScrollingUp && currScroll <= 2) return;
+
+      const secRect = sec.getBoundingClientRect();
+      if (isScrollingDown && secRect.top > 120 && currScroll === 0) return;
+      if (isScrollingUp && secRect.bottom < window.innerHeight - 100 && currScroll >= maxScroll - 2) return;
+
+      const nextScroll = currScroll + deltaY * 1.5;
+
+      if (isScrollingDown && nextScroll >= maxScroll) {
+        container.scrollTop = maxScroll;
+        return;
+      }
+
+      if (isScrollingUp && nextScroll <= 0) {
+        container.scrollTop = 0;
+        return;
+      }
+
+      if (e.cancelable) e.preventDefault();
+      container.scrollTop = nextScroll;
+    }, { passive: false });
+
   });
 })();
 </script>
