@@ -484,7 +484,7 @@
     container.addEventListener('scroll', syncActiveService, { passive: true });
     syncActiveService();
 
-    // Wheel event routing: Instant seamless transition to website scroll at boundaries
+    // Wheel event routing: Reliable inner card scrolling with automatic page scroll transition at limits
     sec.addEventListener('wheel', (e) => {
       const isScrollingDown = e.deltaY > 0;
       const isScrollingUp   = e.deltaY < 0;
@@ -492,25 +492,13 @@
       const maxScroll  = container.scrollHeight - container.clientHeight;
       const currScroll = container.scrollTop;
 
-      // 1. If at 7th service (bottom boundary) and scrolling DOWN -> Let website page scroll naturally!
+      // 1. At 7th service (bottom boundary) and scrolling DOWN -> Let website page scroll naturally!
       if (isScrollingDown && currScroll >= maxScroll - 2) {
         return;
       }
 
-      // 2. If at 1st service (top boundary) and scrolling UP -> Let website page scroll naturally!
+      // 2. At 1st service (top boundary) and scrolling UP -> Let website page scroll naturally!
       if (isScrollingUp && currScroll <= 2) {
-        return;
-      }
-
-      const secRect = sec.getBoundingClientRect();
-
-      // 3. When scrolling DOWN into section: section must first reach top of frame (secRect.top <= 120)
-      if (isScrollingDown && secRect.top > 120 && currScroll === 0) {
-        return;
-      }
-
-      // 4. When scrolling UP into section: section bottom must be in view
-      if (isScrollingUp && secRect.bottom < window.innerHeight - 100 && currScroll >= maxScroll - 2) {
         return;
       }
 
@@ -520,23 +508,22 @@
       } else if (e.deltaMode === 2) {
         amount *= container.clientHeight;
       }
-      amount *= 1.5;
 
       const nextScroll = currScroll + amount;
 
-      // Reaching 7th service (bottom boundary): set to max and let website scroll immediately
+      // Reaching 7th service: set to max and let website page scroll
       if (isScrollingDown && nextScroll >= maxScroll) {
         container.scrollTop = maxScroll;
         return;
       }
 
-      // Reaching 1st service (top boundary): set to 0 and let website scroll immediately
+      // Reaching 1st service: set to 0 and let website page scroll
       if (isScrollingUp && nextScroll <= 0) {
         container.scrollTop = 0;
         return;
       }
 
-      // Inside bounds: intercept wheel and scroll inner cards container
+      // Inside bounds: intercept wheel event and update inner cards scroll
       e.preventDefault();
       container.scrollTop = nextScroll;
     }, { passive: false });
@@ -562,11 +549,7 @@
       if (isScrollingDown && currScroll >= maxScroll - 2) return;
       if (isScrollingUp && currScroll <= 2) return;
 
-      const secRect = sec.getBoundingClientRect();
-      if (isScrollingDown && secRect.top > 120 && currScroll === 0) return;
-      if (isScrollingUp && secRect.bottom < window.innerHeight - 100 && currScroll >= maxScroll - 2) return;
-
-      const nextScroll = currScroll + deltaY * 1.5;
+      const nextScroll = currScroll + deltaY;
 
       if (isScrollingDown && nextScroll >= maxScroll) {
         container.scrollTop = maxScroll;
