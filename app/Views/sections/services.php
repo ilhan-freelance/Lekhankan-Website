@@ -206,7 +206,7 @@
     container.addEventListener('scroll', syncActiveService, { passive: true });
     syncActiveService();
 
-    // Wheel event routing: Reliable inner card scrolling with automatic page scroll transition at limits
+    // Wheel event routing: Requires full section view before inner card scroll captures
     sec.addEventListener('wheel', (e) => {
       const isScrollingDown = e.deltaY > 0;
       const isScrollingUp   = e.deltaY < 0;
@@ -221,6 +221,18 @@
 
       // 2. At 1st service (top boundary) and scrolling UP -> Let website page scroll naturally!
       if (isScrollingUp && currScroll <= 2) {
+        return;
+      }
+
+      const secRect = sec.getBoundingClientRect();
+
+      // 3. When scrolling DOWN: section must align near top of viewport (secRect.top <= 100) before inner scroll starts!
+      if (isScrollingDown && currScroll === 0 && secRect.top > 100) {
+        return;
+      }
+
+      // 4. When scrolling UP: section must be fully in view (secRect.bottom <= window.innerHeight + 50) before inner scroll starts!
+      if (isScrollingUp && currScroll >= maxScroll - 2 && secRect.bottom > window.innerHeight + 50) {
         return;
       }
 
@@ -270,6 +282,10 @@
 
       if (isScrollingDown && currScroll >= maxScroll - 2) return;
       if (isScrollingUp && currScroll <= 2) return;
+
+      const secRect = sec.getBoundingClientRect();
+      if (isScrollingDown && currScroll === 0 && secRect.top > 100) return;
+      if (isScrollingUp && currScroll >= maxScroll - 2 && secRect.bottom > window.innerHeight + 50) return;
 
       const nextScroll = currScroll + deltaY;
 
