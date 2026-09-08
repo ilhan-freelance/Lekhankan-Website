@@ -484,7 +484,7 @@
     container.addEventListener('scroll', syncActiveService, { passive: true });
     syncActiveService();
 
-    // Wheel event routing: Requires full section view before inner card scroll captures
+    // Wheel event routing: Lock window position during inner card scroll, align section cleanly in frame
     sec.addEventListener('wheel', (e) => {
       const isScrollingDown = e.deltaY > 0;
       const isScrollingUp   = e.deltaY < 0;
@@ -492,26 +492,27 @@
       const maxScroll  = container.scrollHeight - container.clientHeight;
       const currScroll = container.scrollTop;
 
-      // 1. At 7th service (bottom boundary) and scrolling DOWN -> Let website page scroll naturally!
+      // 1. If at 7th service (bottom boundary) and scrolling DOWN -> unlock window to scroll down to Industries
       if (isScrollingDown && currScroll >= maxScroll - 2) {
         return;
       }
 
-      // 2. At 1st service (top boundary) and scrolling UP -> Let website page scroll naturally!
+      // 2. If at 1st service (top boundary) and scrolling UP -> unlock window to scroll up to Why Us
       if (isScrollingUp && currScroll <= 2) {
         return;
       }
 
+      // 3. LOCK main window in frame while scrolling through inner service cards!
+      e.preventDefault();
+
+      // Smoothly align section to top of viewport if slightly off
       const secRect = sec.getBoundingClientRect();
-
-      // 3. When scrolling DOWN: section must align near top of viewport (secRect.top <= 100) before inner scroll starts!
-      if (isScrollingDown && currScroll === 0 && secRect.top > 100) {
-        return;
-      }
-
-      // 4. When scrolling UP: section must be fully in view (secRect.bottom <= window.innerHeight + 50) before inner scroll starts!
-      if (isScrollingUp && currScroll >= maxScroll - 2 && secRect.bottom > window.innerHeight + 50) {
-        return;
+      const desiredTop = 70; // 70px below top of screen
+      if (Math.abs(secRect.top - desiredTop) > 15 && Math.abs(secRect.top - desiredTop) < 400) {
+        window.scrollTo({
+          top: window.pageYOffset + secRect.top - desiredTop,
+          behavior: 'smooth'
+        });
       }
 
       let amount = e.deltaY;
@@ -523,21 +524,13 @@
 
       const nextScroll = currScroll + amount;
 
-      // Reaching 7th service: set to max and let website page scroll
       if (isScrollingDown && nextScroll >= maxScroll) {
         container.scrollTop = maxScroll;
-        return;
-      }
-
-      // Reaching 1st service: set to 0 and let website page scroll
-      if (isScrollingUp && nextScroll <= 0) {
+      } else if (isScrollingUp && nextScroll <= 0) {
         container.scrollTop = 0;
-        return;
+      } else {
+        container.scrollTop = nextScroll;
       }
-
-      // Inside bounds: intercept wheel event and update inner cards scroll
-      e.preventDefault();
-      container.scrollTop = nextScroll;
     }, { passive: false });
 
     // Touch event routing for mobile devices
@@ -561,24 +554,17 @@
       if (isScrollingDown && currScroll >= maxScroll - 2) return;
       if (isScrollingUp && currScroll <= 2) return;
 
-      const secRect = sec.getBoundingClientRect();
-      if (isScrollingDown && currScroll === 0 && secRect.top > 100) return;
-      if (isScrollingUp && currScroll >= maxScroll - 2 && secRect.bottom > window.innerHeight + 50) return;
+      if (e.cancelable) e.preventDefault();
 
       const nextScroll = currScroll + deltaY;
 
       if (isScrollingDown && nextScroll >= maxScroll) {
         container.scrollTop = maxScroll;
-        return;
-      }
-
-      if (isScrollingUp && nextScroll <= 0) {
+      } else if (isScrollingUp && nextScroll <= 0) {
         container.scrollTop = 0;
-        return;
+      } else {
+        container.scrollTop = nextScroll;
       }
-
-      if (e.cancelable) e.preventDefault();
-      container.scrollTop = nextScroll;
     }, { passive: false });
 
   });
